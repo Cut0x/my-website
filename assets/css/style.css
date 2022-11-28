@@ -3,6 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #2c2f33;
   color: white;
+  box-sizing: border-box;
 }
 
 .topnav {
@@ -159,7 +160,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #1b28b4;
+  color: #5865F2;
 }
 
 .btn_add_bot {
@@ -237,38 +238,58 @@ div.scrollmenu a:hover {
 }
 
 .closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 60px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 60px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: center;
 }
 
 .flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
+    border-radius: 25px;
+    background-color: #0a26bb;
+    padding: 10px;
+    flex: 50%;
+}
+
+.flex-item-left img {
+    border-radius: 60px;
+}
+
+.flex-item-left img:hover {
+    box-shadow: 5px 5px 5px black;
 }
 
 .flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
-  flex: 50%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #0a26bb;
+    padding: 10px;
+    flex: 50%;
 }
 
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
+    .flex-item-right, .flex-item-left {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        flex: 100%;
+    }
 }

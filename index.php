@@ -42,8 +42,12 @@
     <div style="margin: 25px;"></div>
 
     <div class="flex-container">
-        <div class="flex-item-left">1</div>
-        <div class="flex-item-right">2</div>
+        <div class="flex-item-left">
+            <img src="./assets/img/my-logo.png" alt="">
+        </div>
+        <div class="flex-item-right">
+            <img src="./assets/img/my-logo.png" alt="">
+        </div>
     </div>
 
     <div style="margin: 25px;"></div>

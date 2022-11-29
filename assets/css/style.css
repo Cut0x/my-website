@@ -293,3 +293,9 @@ div.scrollmenu a:hover {
         flex: 100%;
     }
 }
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

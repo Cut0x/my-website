@@ -30,18 +30,20 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="./" class="active"><i class="bi bi-house-fill"></i> Home</a>
+        <a href="./" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
 
-        <a href="./about/"><i class="bi bi-book-fill"></i> About</a>
+        <a href=""><i class="bi bi-book-fill"></i> A Propos</a>
 
         <a href="./contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
+        <a href="#projects"><i class="bi bi-terminal-fill"></i> Projets</a>
+
         <div class="dropdown">
             <button class="dropbtn">
-                <?php if ($_GET['lang'] == "en") { echo '<i class="bi bi-globe-americas"></i> English'; } else { echo '<i class="bi bi-globe-central-south-asia"></i> Français'; }; ?>
+                <i class="bi bi-caret-down-fill"></i> <?php if ($_GET['lang'] == "en") { echo 'English'; } else { echo 'Français'; }; ?>
             </button>
             <div class="dropdown-content">
-                <a href="./?lang=<?php if ($_GET['lang'] == "en") { echo 'fr'; } else { echo 'en'; }; ?>"><?php if ($_GET['lang'] == "en") { echo '<i class="bi bi-globe-central-south-asia"></i> Français'; } else { echo '<i class="bi bi-globe-americas"></i> English'; }; ?></a>
+                <a href="./?lang=<?php if ($_GET['lang'] == "en") { echo 'fr'; } else { echo 'en'; }; ?>"><?php if ($_GET['lang'] == "en") { echo 'Français'; } else { echo 'English'; }; ?></a>
             </div>
         </div>
 
@@ -53,6 +55,27 @@
     <div style="margin: 25px;"></div>
 
     <?php if ($lang == "fr") { ?>
+        <!-- MY PROGRESS BAR -->
+        <div class="my-prg-b">
+            <div class="progress">
+                <div class="progress-done" data-done="90">
+                    HTML - 90%
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/progress-bar.js"></script>
+
+        <!-- MY PROJECTS -->
+        <div>
+            <h2 style="padding-left: 10px;" id="projects">
+                Mes Projets :
+            </h2>
+            <div class="scrollmenu">
+                <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
+                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 500px; border-radius: 20px;" alt="">
+                </a>
+            </div>
+        </div>
     <?php } else { ?>
     <?php }; ?>
 

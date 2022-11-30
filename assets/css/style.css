@@ -306,10 +306,11 @@ div.scrollmenu a:hover {
   display: grid;
   justify-content: center;
   margin-bottom: 10px;
+  height: 320px;
 }
 
 .about {
-  background: linear-gradient(to left, #0a26bb,#1e39d0);
+  text-align: end;
 }
 
 .about-banner {
@@ -319,6 +320,32 @@ div.scrollmenu a:hover {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 525px) {
+  .about-banner {
+    height: 275px;
+    width: 400px;
+  }
+
+  .about-pdp {
+    margin-bottom: 5px;
+  }
+}
+
 .about-pdp {
   margin-bottom: 10px;
+}
+
+.about-content-pdp {
+  margin: 25px;
+  padding-top: 100px;
+}
+
+.about-content-pdp img {
+  border-radius: 60px;
+}
+
+.desciption {
+  padding: 7px;
+  background-color: #242222;
+  border-radius: 10px;
 }

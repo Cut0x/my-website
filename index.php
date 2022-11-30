@@ -65,11 +65,21 @@
         <div style="margin: 15px;"></div>
 
         <div class="div-about" id="about">
-            <div class="about-banner"></div>
-            <div>
-                <img src="./assets/img/my-logo.png" alt="">
+            <div class="about-banner">
+                <div class="about-content-pdp">
+                    <h1>
+                        <img src="./assets/img/my-logo.png" alt="">
+                        <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span> 
+                    </h1>
+                    <p class="desciption">
+                        Bonjour, je suis Cut0x, j'ai 17ans (bientôt 18ans). Je suis un passionné de programmation depuis maintenant 10ans (j'ai commencé la programmation en 2012).
+                        Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div style="margin: 130px;"></div>
 
         <!-- MY PROJECTS -->
         <div>
@@ -94,10 +104,20 @@
 
         <div class="div-about" id="about">
             <div class="about-banner">
-                
-                <img src="./assets/img/my-logo.png" alt="">
+                <div class="about-content-pdp">
+                    <h1>
+                        <img src="./assets/img/my-logo.png" alt="">
+                        <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span> 
+                    </h1>
+                    <p class="desciption">
+                        Hello, I'm Cut0x, I'm 17 (soon to be 18). I have been a programming enthusiast for 10 years now (I started programming in 2012).
+                        What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div style="margin: 135px;"></div>
 
         <!-- MY PROJECTS -->
         <div>

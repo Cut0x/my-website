@@ -19,19 +19,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
   <link rel="shortcut icon" href="./assets/img/my-logo.png" type="image/x-icon">
-
-  <style>
-    .cards {
-        display: grid;
-        grid-template-colunms: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-  </style>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
         <?php if ($lang == "fr") { ?>
-            <a href="./" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
+            <a href="./#header" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
 
             <a href="#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
@@ -41,7 +33,7 @@
         <?php } else { ?>
             <a href="./" class="active"><i class="bi bi-house-fill"></i> Home</a>
 
-            <a href=""><i class="bi bi-book-fill"></i> About</a>
+            <a href="#about"><i class="bi bi-book-fill"></i> About</a>
 
             <a href="./contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
@@ -61,18 +53,23 @@
         <script src="./assets/js/topnav.js"></script>
     </div>
 
-    <div style="margin: 25px;"></div>
 
     <?php if ($lang == "fr") { ?>
-        <!-- MY PROGRESS BAR -->
-        <div class="my-prg-b">
-            <div class="progress">
-                <div class="progress-done" data-done="90">
-                    HTML - 90%
-                </div>
+        <div class="div-header" id="header">
+            <h1>
+                Hey !
+            </h1>
+            <script src="./assets/js/typing-fr.js"></script>
+        </div>
+
+        <div style="margin: 15px;"></div>
+
+        <div class="div-about" id="about">
+            <div class="about-banner"></div>
+            <div>
+                <img src="./assets/img/my-logo.png" alt="">
             </div>
         </div>
-        <script src="./assets/js/progress-bar.js"></script>
 
         <!-- MY PROJECTS -->
         <div>
@@ -86,6 +83,33 @@
             </div>
         </div>
     <?php } else { ?>
+        <div class="div-header" id="header">
+            <h1>
+                   Hey!
+            </h1>
+            <script src="./assets/js/typing-en.js"></script>
+        </div>
+
+        <div style="margin: 15px;"></div>
+
+        <div class="div-about" id="about">
+            <div class="about-banner">
+                
+                <img src="./assets/img/my-logo.png" alt="">
+            </div>
+        </div>
+
+        <!-- MY PROJECTS -->
+        <div>
+            <h2 style="padding-left: 10px;" id="projects">
+                My Projects :
+            </h2>
+            <div class="scrollmenu">
+                <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
+                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 500px; border-radius: 20px;" alt="">
+                </a>
+            </div>
+        </div>
     <?php }; ?>
 
     <div style="margin: 25px;"></div>

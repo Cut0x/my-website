@@ -19,33 +19,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
   <link rel="shortcut icon" href="../../assets/img/my-logo.png" type="image/x-icon">
-
-  <style>
-    .cards {
-        display: grid;
-        grid-template-colunms: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-  </style>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
         <?php if ($lang == "fr") { ?>
-            <a href="../../" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
+            <a href="../../"><i class="bi bi-house-fill"></i> Accueil</a>
 
             <a href="../../#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
             <a href="../../contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
-            <a href="../../#projects"><i class="bi bi-terminal-fill"></i> Projets</a>
+            <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projets</a>
         <?php } else { ?>
-            <a href="../../" class="active"><i class="bi bi-house-fill"></i> Home</a>
+            <a href="../../"><i class="bi bi-house-fill"></i> Home</a>
 
             <a href="../../#about"><i class="bi bi-book-fill"></i> About</a>
 
             <a href="../../contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
-            <a href="../../#projects"><i class="bi bi-terminal-fill"></i> Projects</a>
+            <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projects</a>
         <?php }; ?>
         <div class="dropdown">
             <button class="dropbtn">

@@ -266,7 +266,7 @@ div.scrollmenu a:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 3px -5px #0a26bb, 0 2px 5px #0a26bb;
-  transition: 1s ease;
+  transition: 1s cubic-bezier(0.66, 0.17, 0.31, 1.03);
 }
 
 .my-prg-b {
@@ -274,4 +274,51 @@ div.scrollmenu a:hover {
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+.div-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: #0a26bb;
+}
+
+.div-header h1 {
+  font-size: 3em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.div-header span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.div-about {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.about {
+  background: linear-gradient(to left, #0a26bb,#1e39d0);
+}
+
+.about-banner {
+  background: url('https://cdn.discordapp.com/attachments/1006601939577999361/1046906810885480458/8a50fdea91cf9c94a367902baffadadd.gif');
+  height: 250px;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.about-pdp {
+  margin-bottom: 10px;
 }

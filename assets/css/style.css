@@ -349,3 +349,22 @@ div.scrollmenu a:hover {
   background-color: #242222;
   border-radius: 10px;
 }
+
+.social_link {
+  text-align: center;
+}
+
+.social_link a {
+  margin: 3px;
+  color: white;
+  border: 3px solid #0a26bb;
+  background-color: #0a26bb;
+  border-radius: 7px;
+  font-size: xx-large;
+}
+
+.social_link a:hover {
+  color: white;
+  border: 3px solid #1e39d0;
+  background-color: #1e39d0;
+}

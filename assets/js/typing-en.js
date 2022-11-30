@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(event){
-    var dataText = [ "Hey!", "I'm Cut0x.", "I love developpement."];
+    var dataText = [ "Hey!", "I'm Cut0x."];
     
     function typeWriter(text, i, fnCallback) {
       if (i < (text.length)) {

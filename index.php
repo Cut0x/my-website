@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div style="margin: 220px;"></div>
+        <div style="margin: 240px;"></div>
 
         <!-- MY PROJECTS -->
         <div>
@@ -97,7 +97,7 @@
             </h2>
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
-                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 500px; border-radius: 20px;" alt="">
+                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: auto; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>
@@ -135,7 +135,7 @@
             </div>
         </div>
 
-        <div style="margin: 220px;"></div>
+        <div style="margin: 240px;"></div>
 
         <!-- MY PROJECTS -->
         <div>

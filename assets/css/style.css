@@ -259,13 +259,13 @@ div.scrollmenu a:hover {
   height: 100%;
   width: 0;
   opacity: 0;
-  background: linear-gradient(to left, #f2709c,#ff9472);
+  background: linear-gradient(to left, #0a26bb,#1e39d0);
   color: #fff;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  box-shadow: 0 3px 3px -5px #0a26bb, 0 2px 5px #0a26bb;
   transition: 1s ease;
 }
 

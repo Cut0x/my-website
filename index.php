@@ -76,13 +76,13 @@
                         Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.
                     </p>
                     <div class="social_link">
-                        <a href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
+                        <a target="_blank" href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
 
-                        <a href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
 
-                        <a href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
+                        <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
 
-                        <a href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -123,13 +123,13 @@
                         What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.
                     </p>
                     <div class="social_link">
-                        <a href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
+                        <a target="_blank" href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
 
-                        <a href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
 
-                        <a href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
+                        <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
 
-                        <a href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
             </div>

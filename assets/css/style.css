@@ -368,3 +368,37 @@ div.scrollmenu a:hover {
   border: 3px solid #1e39d0;
   background-color: #1e39d0;
 }
+
+.div-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: #0a26bb;
+}
+
+.div-contact h1 {
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.div-contact span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.contact-div-left {
+  text-align: left;
+}
+
+.contact-div-right {
+  text-align: right;
+}

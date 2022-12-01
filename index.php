@@ -150,9 +150,13 @@
         </div>
 
         <div style="margin: 40px;"></div>
-    <?php }; ?>
 
-    <div style="margin: 25px;"></div>
+        <div class="div-contact" id="contact">
+            <h1>
+                Contact me ?
+            </h1>
+        </div>
+    <?php }; ?>
 
     <footer>
         <?php if ($lang == "fr") { ?>

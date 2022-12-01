@@ -50,13 +50,13 @@
 
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="ResponvieNav()">&#9776;</a>
 
-        <script src="./assets/js/topnav.js"></script>
+        <script src="../../assets/js/topnav.js"></script>
     </div>
 
     <div style="margin: 25px;"></div>
 
     <?php if ($lang == "fr") { ?>
-        <!-- MY PROGRESS BAR -->
+        <!-- PROJECT PROGRESS BAR -->
         <div class="my-prg-b">
             <h1>
                 Avancement

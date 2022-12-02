@@ -155,6 +155,14 @@
             <h1>
                 Contact me ?
             </h1>
+            <div class="div-contact-flex">
+                <div class="div-contact-items">
+                    test
+                </div>
+                <div class="div-contact-items">
+                    test
+                </div>
+            </div>
         </div>
     <?php }; ?>
 

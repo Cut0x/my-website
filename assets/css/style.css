@@ -370,35 +370,21 @@ div.scrollmenu a:hover {
 }
 
 .div-contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
-  padding-top: 10px;
+  text-align: center;
   background-color: #0a26bb;
 }
 
-.div-contact h1 {
-  font-size: 2em;
-  color: white;
-  text-transform: uppercase;
+.div-contact-flex {
+  display: flex;
+  justify-content: center;
 }
 
-.div-contact span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
+@media screen and (max-width: 600px) {
+  .div-contact-flex {
+    display: grid;
   }
 }
 
-.contact-div-left {
-  text-align: left;
-}
-
-.contact-div-right {
-  text-align: right;
+.div-contact-items {
+  margin: 5px;
 }

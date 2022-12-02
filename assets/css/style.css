@@ -316,7 +316,7 @@ div.scrollmenu a:hover {
 .about-banner {
   background: url('https://cdn.discordapp.com/attachments/1006601939577999361/1046906810885480458/8a50fdea91cf9c94a367902baffadadd.gif');
   height: 250px;
-  width: 500px;
+  width: 497px;
   border-radius: 20px;
 }
 
@@ -386,5 +386,35 @@ div.scrollmenu a:hover {
 }
 
 .div-contact-items {
-  margin: 5px;
+  margin: 45px;
+}
+
+.btn_mail_contact {
+  color: #0a26bb;
+  border: 5px solid white;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: x-large;
+}
+
+.btn_mail_contact:hover {
+  color: #0a26bb;
+  border: 5px solid #bdb7b7;
+  background-color: #bdb7b7;
+}
+
+.btn_contact {
+  margin: 3px;
+  color: #0a26bb;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 7px;
+  font-size: xx-large;
+}
+
+.btn_contact:hover {
+  color: #0a26bb;
+  border: 3px solid #bdb7b7;
+  background-color: #bdb7b7;
 }

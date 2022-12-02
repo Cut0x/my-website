@@ -27,7 +27,7 @@
 
             <a href="#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
-            <a href="./contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
             <a href="#projects"><i class="bi bi-terminal-fill"></i> Projets</a>
         <?php } else { ?>
@@ -35,7 +35,7 @@
 
             <a href="#about"><i class="bi bi-book-fill"></i> About</a>
 
-            <a href="./contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
             <a href="#projects"><i class="bi bi-terminal-fill"></i> Projects</a>
         <?php }; ?>
@@ -97,8 +97,28 @@
             </h2>
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
-                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: auto; border-radius: 20px;" alt="">
+                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 350px; border-radius: 20px;" alt="">
                 </a>
+            </div>
+        </div>
+
+        <div style="margin: 40px;"></div>
+
+        <div class="div-contact" id="contact">
+            <h1>
+                Me contacter ?
+            </h1>
+            <div class="div-contact-flex">
+                <div class="div-contact-items">
+                    <a href="./contact/mail/" class="btn_mail_contact">
+                        <i class="bi bi-envelope-fill"></i> Envoyez moi un mail ici !
+                    </a>
+                </div>
+                <div class="div-contact-items">
+                    <a href="https://twitter.com/Cut0x_" target="_blank" class="btn_contact"><i class="bi bi-twitter"></i></a>
+
+                    <a href="https://discord.com/invite/aTX6FP37pK" target="_blank" class="btn_contact"><i class="bi bi-discord"></i></a>
+                </div>
             </div>
         </div>
     <?php } else { ?>
@@ -144,7 +164,7 @@
             </h2>
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
-                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 500px; border-radius: 20px;" alt="">
+                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 350px; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>
@@ -157,10 +177,14 @@
             </h1>
             <div class="div-contact-flex">
                 <div class="div-contact-items">
-                    test
+                    <a href="./contact/mail/" class="btn_mail_contact">
+                        <i class="bi bi-envelope-fill"></i> Send me a mail here !
+                    </a>
                 </div>
                 <div class="div-contact-items">
-                    test
+                    <a href="https://twitter.com/Cut0x_" target="_blank" class="btn_contact"><i class="bi bi-twitter"></i></a>
+
+                    <a href="https://discord.com/invite/aTX6FP37pK" target="_blank" class="btn_contact"><i class="bi bi-discord"></i></a>
                 </div>
             </div>
         </div>

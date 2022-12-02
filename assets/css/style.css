@@ -395,7 +395,13 @@ div.scrollmenu a:hover {
   background-color: white;
   text-decoration: none;
   border-radius: 7px;
-  font-size: large;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 600px) {
+  .btn_mail_contact {
+    font-size: large;
+  }
 }
 
 .btn_mail_contact:hover {

@@ -169,6 +169,9 @@
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+                <a href="./project/devorion/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
             </div>
         </div>
 

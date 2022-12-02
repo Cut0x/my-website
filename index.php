@@ -97,7 +97,10 @@
             </h2>
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
-                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 350px; border-radius: 20px;" alt="">
+                    <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
+                <a href="./project/devorion/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>
@@ -164,7 +167,7 @@
             </h2>
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
-                    <img src="https://cdn.discordapp.com/attachments/914271938359210045/1043653408235716690/0_3.png" style="width: 350px; border-radius: 20px;" alt="">
+                    <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>

@@ -27,7 +27,7 @@
 
             <a href="../../#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
-            <a href="../../contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="../../#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
             <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projets</a>
         <?php } else { ?>
@@ -35,7 +35,7 @@
 
             <a href="../../#about"><i class="bi bi-book-fill"></i> About</a>
 
-            <a href="../../contact/"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="../../#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
             <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projects</a>
         <?php }; ?>

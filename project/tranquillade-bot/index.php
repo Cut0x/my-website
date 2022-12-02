@@ -4,6 +4,8 @@
     if (!$_GET['lang']) {
         header('location: ./?lang=fr');
     };
+
+    $advencement = 15;
 ?>
 
 <!DOCTYPE html>
@@ -63,16 +65,99 @@
             </h1>
             <div style="margin: 15px;"></div>
             <div class="progress">
-                <div class="progress-done" data-done="15">
-                    15%
+                <div class="progress-done" data-done="<?= $advencement; ?>">
+                    <?= $advencement; ?>%
                 </div>
             </div>
         </div>
         <script src="../../assets/js/progress-bar.js"></script>
-    <?php } else { ?>
-    <?php }; ?>
 
-    <div style="margin: 25px;"></div>
+        <div class="div-project">
+            <div class="banner-project">
+                <div class="project-content-pdp">
+                    <h1>
+                        <img src="../../assets/img/projects/logo/trklade-bot.png" alt="">
+                        
+                        <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Tranquillade</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Bot</span>
+            <span class="tag">Discord</span>
+            <span class="tag">Dashboard</span>
+        </div>
+
+        <div style="margin: 25px;"></div>
+
+        <div class="tag-info-p">
+            <div class="social_link">
+                <a target="_blank" href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
+
+                <a target="_blank" href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
+
+                <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
+
+                <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+        <div style="margin: 40px;"></div>
+
+        <div class="div-contact" id="contact">
+            <h1>
+                Me contacter ?
+            </h1>
+            <div class="div-contact-flex">
+                <div class="div-contact-items">
+                    <a href="./contact/mail/" class="btn_mail_contact">
+                        <i class="bi bi-envelope-fill"></i> Envoyez moi un mail ici !
+                    </a>
+                </div>
+                <div class="div-contact-items">
+                    <a href="https://twitter.com/Cut0x_" target="_blank" class="btn_contact"><i class="bi bi-twitter"></i></a>
+
+                    <a href="https://discord.com/invite/aTX6FP37pK" target="_blank" class="btn_contact"><i class="bi bi-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <!-- PROJECT PROGRESS BAR -->
+        <div class="my-prg-b">
+            <h1>
+                Advancement
+            </h1>
+            <div style="margin: 15px;"></div>
+            <div class="progress">
+                <div class="progress-done" data-done="<?= $advencement; ?>">
+                    <?= $advencement; ?>%
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/js/progress-bar.js"></script>
+
+        <div style="margin: 40px;"></div>
+
+        <div class="div-contact" id="contact">
+            <h1>
+                Contact me ?
+            </h1>
+            <div class="div-contact-flex">
+                <div class="div-contact-items">
+                    <a href="../../contact/mail/" class="btn_mail_contact">
+                        <i class="bi bi-envelope-fill"></i> Send me a mail here !
+                    </a>
+                </div>
+                <div class="div-contact-items">
+                    <a href="https://twitter.com/Cut0x_" target="_blank" class="btn_contact"><i class="bi bi-twitter"></i></a>
+
+                    <a href="https://discord.com/invite/aTX6FP37pK" target="_blank" class="btn_contact"><i class="bi bi-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    <?php }; ?>
 
     <footer>
         <?php if ($lang == "fr") { ?>

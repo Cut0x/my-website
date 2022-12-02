@@ -424,3 +424,66 @@ div.scrollmenu a:hover {
   border: 3px solid #bdb7b7;
   background-color: #bdb7b7;
 }
+
+.div-project {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: 320px;
+}
+
+.project {
+  text-align: end;
+}
+
+.banner-project {
+  background: url('../img/projects/banner/trklade-bot.png');
+  height: 250px;
+  width: 497px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 525px) {
+  .banner-project {
+    height: 275px;
+    width: 370px;
+  }
+
+  .project-pdp {
+    margin-bottom: 5px;
+  }
+}
+
+.project-pdp {
+  margin-bottom: 10px;
+}
+
+.project-content-pdp {
+  margin: 25px;
+  padding-top: 100px;
+}
+
+.project-content-pdp img {
+  height: 160px;
+  box-shadow: 7px 7px 7px black;
+  border-radius: 80px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+}
+
+.tag {
+  margin: 5px;
+  border: 5px solid #5865F2;
+  background-color: #5865F2;
+  border-radius: 30px;
+  color: black;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.tag:hover {
+  box-shadow: 5px 5px 5px black;
+}

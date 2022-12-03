@@ -55,8 +55,6 @@
         <script src="../../assets/js/topnav.js"></script>
     </div>
 
-    <div style="margin: 25px;"></div>
-
     <?php if ($lang == "fr") { ?>
         <!-- PROJECT PROGRESS BAR -->
         <div class="my-prg-b">
@@ -72,57 +70,18 @@
         </div>
         <script src="../../assets/js/progress-bar.js"></script>
 
-        <div class="div-project">
-            <div class="banner-project">
-                <div class="project-content-pdp">
-                    <h1>
-                        <img src="../../assets/img/projects/logo/trklade-bot.png" alt="">
-                        
-                        <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Tranquillade</span>
-                    </h1>
-                </div>
+        <div style="margin: 15px;"></div>
+    
+        <div class="project">
+            <img src="../../assets/img/projects/logo/trklade-bot.png" height="180" style="border-radius: 90px" alt="">
+            <div class="t">
+                <h1>
+                    Tranquillade
+                </h1>
             </div>
         </div>
 
-        <div class="tags">
-            <span class="tag">Bot</span>
-            <span class="tag">Discord</span>
-            <span class="tag">Dashboard</span>
-        </div>
-
-        <div style="margin: 25px;"></div>
-
-        <div class="tag-info-p">
-            <div class="social_link">
-                <a target="_blank" href="https://twitter.com/Cut0x_"><i class="bi bi-twitter"></i></a>
-
-                <a target="_blank" href="https://github.com/Cut0x"><i class="bi bi-github"></i></a>
-
-                <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
-
-                <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
-            </div>
-        </div>
-
-        <div style="margin: 40px;"></div>
-
-        <div class="div-contact" id="contact">
-            <h1>
-                Me contacter ?
-            </h1>
-            <div class="div-contact-flex">
-                <div class="div-contact-items">
-                    <a href="./contact/mail/" class="btn_mail_contact">
-                        <i class="bi bi-envelope-fill"></i> Envoyez moi un mail ici !
-                    </a>
-                </div>
-                <div class="div-contact-items">
-                    <a href="https://twitter.com/Cut0x_" target="_blank" class="btn_contact"><i class="bi bi-twitter"></i></a>
-
-                    <a href="https://discord.com/invite/aTX6FP37pK" target="_blank" class="btn_contact"><i class="bi bi-discord"></i></a>
-                </div>
-            </div>
-        </div>
+        <div style="margin: 240px;"></div>
     <?php } else { ?>
         <!-- PROJECT PROGRESS BAR -->
         <div class="my-prg-b">

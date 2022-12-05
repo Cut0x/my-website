@@ -21,7 +21,8 @@
   <link rel="shortcut icon" href="./assets/img/my-logo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
+    <div class="topnav" id="myTopnav" style="
+  position: fixed;">
         <?php if ($lang == "fr") { ?>
             <a href="./#header" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
 
@@ -71,7 +72,7 @@
                         <img src="./assets/img/my-logo.png" alt="">
                         <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span> 
                     </h1>
-                    <p class="desciption">
+                    <p class="description">
                         Bonjour, je suis Cut0x, j'ai 17ans (bientôt 18ans). Je suis un passionné de programmation depuis maintenant 10ans (j'ai commencé la programmation en 2012).
                         Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.
                     </p>

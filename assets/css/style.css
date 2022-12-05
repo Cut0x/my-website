@@ -344,7 +344,7 @@ div.scrollmenu a:hover {
   border-radius: 60px;
 }
 
-.desciption {
+.description {
   padding: 7px;
   background-color: #242222;
   border-radius: 10px;
@@ -445,11 +445,22 @@ div.scrollmenu a:hover {
 }
 
 .project {
-  display: grid;
+  display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .project img {
   width: 200px;
   border-radius: 200px;
+}
+
+.descs {
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
 }

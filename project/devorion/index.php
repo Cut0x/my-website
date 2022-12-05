@@ -5,7 +5,7 @@
         header('location: ./?lang=fr');
     };
 
-    $advencement = 15;
+    $advencement = 0;
 ?>
 
 <!DOCTYPE html>
@@ -74,27 +74,22 @@
     
         <div class="project">
             <div class="project-info">
-                <img class="pp" src="../../assets/img/projects/logo/trklade-bot.png" alt="Logo du bot Tranquillade">
+                <img class="pp" src="../../assets/img/projects/logo/devorion.png" alt="Logo de devorion">
                 <h1>
-                    Tranquillade
+                    DevOrion
                 </h1>
 
                 <div style="margin: 10px;"></div>
 
                 <div class="tags">
-                    <p class="tag">Bot</p>
-                    <p class="tag">Discord</p>
-                    <p class="tag">Dashboard</p>
-                    <p class="tag">Website</p>
+                    <p class="tag">??</p>
                 </div>
 
                 <div style="margin: 10px;"></div>
 
                 <div class="descs">
                     <p class="description">
-                        <span style="color: #5865F2;">Tranquillade</span> est un bot multi-fonctions, en effet, en plus d'avoir un dashboard,
-                        <br>
-                        il vous sera pour l'avancement de votre Discord ! <i style="color: orangered;">(Bot encore en développement)</i>
+                        <span style="color: #5865F2;">Bientôt</span>
                     </p>
                 </div>
             </div>
@@ -106,11 +101,11 @@
 
         <div style="margin: 20px;"></div>
 
-        <!--<div class="social_link">
-            <a target="_blank" href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+        <div class="social_link">
+            <a target="_blank" href="https://twitter.com/devorion_"><i class="bi bi-twitter"></i></a>
 
-            <a target="_blank" href="https://github.com/"><i class="bi bi-github"></i></a>
-        </div>-->
+            <a href="#soon"><i class="bi bi-discord"></i></a>
+        </div>
 
         <div style="margin: 240px;"></div>
 
@@ -150,27 +145,22 @@
     
         <div class="project">
             <div class="project-info">
-                <img class="pp" src="../../assets/img/projects/logo/trklade-bot.png" alt="Logo du bot Tranquillade">
+                <img class="pp" src="../../assets/img/projects/logo/devorion.png" alt="Logo de devorion">
                 <h1>
-                    Tranquillade
+                    DevOrion
                 </h1>
 
                 <div style="margin: 10px;"></div>
 
                 <div class="tags">
-                    <p class="tag">Bot</p>
-                    <p class="tag">Discord</p>
-                    <p class="tag">Dashboard</p>
-                    <p class="tag">Website</p>
+                    <p class="tag">??</p>
                 </div>
 
                 <div style="margin: 10px;"></div>
 
                 <div class="descs">
                     <p class="description">
-                        <span style="color: #5865F2;">Tranquillade</span> is a multi-function bot, in fact, in addition to having a dashboard,
-                        <br>
-                        it will be for the advancement of your Discord! <i style="color: orangered;">(Bot still in development)</i>
+                        <span style="color: #5865F2;">Soon</span>
                     </p>
                 </div>
             </div>
@@ -182,11 +172,11 @@
 
         <div style="margin: 20px;"></div>
 
-        <!--<div class="social_link">
-            <a target="_blank" href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+        <div class="social_link">
+            <a target="_blank" href="https://twitter.com/devorion_"><i class="bi bi-twitter"></i></a>
 
-            <a target="_blank" href="https://github.com/"><i class="bi bi-github"></i></a>
-        </div>-->
+            <a href="#soon"><i class="bi bi-discord"></i></a>
+        </div>
 
         <div style="margin: 240px;"></div>
 

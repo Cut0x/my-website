@@ -21,8 +21,7 @@
   <link rel="shortcut icon" href="./assets/img/my-logo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="topnav" id="myTopnav" style="
-  position: fixed;">
+    <div class="topnav" id="myTopnav">
         <?php if ($lang == "fr") { ?>
             <a href="./#header" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
 

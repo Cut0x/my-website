@@ -445,15 +445,11 @@ div.scrollmenu a:hover {
 }
 
 .project {
-  text-align: center;
-}
-
-.t {
-  color: #5865F2;
-}
-
-.pdesc {
-  display: flex;
-  width: 100px;
+  display: grid;
   justify-content: center;
+}
+
+.project img {
+  width: 200px;
+  border-radius: 200px;
 }

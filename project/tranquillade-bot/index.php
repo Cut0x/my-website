@@ -73,11 +73,18 @@
         <div style="margin: 15px;"></div>
     
         <div class="project">
-            <img src="../../assets/img/projects/logo/trklade-bot.png" height="180" style="border-radius: 90px" alt="">
-            <div class="t">
+            <div class="project-info">
+                <img class="pp" src="../../assets/img/projects/logo/trklade-bot.png" alt="Logo du bot Tranquillade">
                 <h1>
                     Tranquillade
                 </h1>
+                <div style="margin: 10px;"></div>
+                <div class="tags">
+                    <p class="tag">Bot</p>
+                    <p class="tag">Discord</p>
+                    <p class="tag">Dashboard</p>
+                    <p class="tag">Website</p>
+                </div>
             </div>
         </div>
 

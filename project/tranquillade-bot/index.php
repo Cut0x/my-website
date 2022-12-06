@@ -25,21 +25,21 @@
 <body>
     <div class="topnav" id="myTopnav">
         <?php if ($lang == "fr") { ?>
-            <a href="../../"><i class="bi bi-house-fill"></i> Accueil</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>"><i class="bi bi-house-fill"></i> Accueil</a>
 
-            <a href="../../#about"><i class="bi bi-book-fill"></i> A Propos</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
-            <a href="../../#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
-            <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projets</a>
+            <a href="./?lang=<?= $_GET['lang']; ?>" class="active"><i class="bi bi-terminal-fill"></i> Projets</a>
         <?php } else { ?>
-            <a href="../../"><i class="bi bi-house-fill"></i> Home</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>"><i class="bi bi-house-fill"></i> Home</a>
 
-            <a href="../../#about"><i class="bi bi-book-fill"></i> About</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>#about"><i class="bi bi-book-fill"></i> About</a>
 
-            <a href="../../#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
+            <a href="../../?lang=<?= $_GET['lang']; ?>#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
 
-            <a href="./" class="active"><i class="bi bi-terminal-fill"></i> Projects</a>
+            <a href="./?lang=<?= $_GET['lang']; ?>" class="active"><i class="bi bi-terminal-fill"></i> Projects</a>
         <?php }; ?>
         <div class="dropdown">
             <button class="dropbtn">

@@ -23,7 +23,7 @@
 <body>
     <div class="topnav" id="myTopnav">
         <?php if ($lang == "fr") { ?>
-            <a href="./#header" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
+            <a href="./?lang=<?= $lang; ?>#header" class="active"><i class="bi bi-house-fill"></i> Accueil</a>
 
             <a href="#about"><i class="bi bi-book-fill"></i> A Propos</a>
 
@@ -102,6 +102,9 @@
                 <a href="./project/devorion/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+                <a href="./project/php-template/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/php-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
             </div>
         </div>
 
@@ -113,7 +116,7 @@
             </h1>
             <div class="div-contact-flex">
                 <div class="div-contact-items">
-                    <a href="./contact/mail/" class="btn_mail_contact">
+                    <a href="./contact/mail/?lang=<?= $lang; ?>" class="btn_mail_contact">
                         <i class="bi bi-envelope-fill"></i> Envoyez moi un mail ici !
                     </a>
                 </div>
@@ -172,6 +175,9 @@
                 <a href="./project/devorion/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+                <a href="./project/php-template/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/php-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
             </div>
         </div>
 
@@ -183,7 +189,7 @@
             </h1>
             <div class="div-contact-flex">
                 <div class="div-contact-items">
-                    <a href="./contact/mail/" class="btn_mail_contact">
+                    <a href="./contact/mail/?lang=<?= $lang; ?>" class="btn_mail_contact">
                         <i class="bi bi-envelope-fill"></i> Send me a mail here !
                     </a>
                 </div>

@@ -8,7 +8,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #0a26bb;
+  background-color: #0a7dbb;
 }
 
 .topnav a {
@@ -22,7 +22,7 @@ body {
 }
 
 .active {
-  background-color: #1e39d0;
+  background-color: #056395;
   color: white;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #1e39d0;
+  background-color: #056395;
   color: white;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 footer {
-  background-color: #0a26bb;
+  background-color: #0a7dbb;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -160,7 +160,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #5865F2;
+  color: black;
 }
 
 .btn_add_bot {
@@ -259,13 +259,13 @@ div.scrollmenu a:hover {
   height: 100%;
   width: 0;
   opacity: 0;
-  background: linear-gradient(to left, #0a26bb,#1e39d0);
+  background: linear-gradient(to left, #0a7dbb,#056395);
   color: #fff;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 3px -5px #0a26bb, 0 2px 5px #0a26bb;
+  box-shadow: 0 3px 3px -5px #0a7dbb, 0 2px 5px #0a7dbb;
   transition: 1s cubic-bezier(0.66, 0.17, 0.31, 1.03);
 }
 
@@ -282,7 +282,7 @@ div.scrollmenu a:hover {
   justify-content: center;
   padding-bottom: 20px;
   padding-top: 10px;
-  background-color: #0a26bb;
+  background-color: #0a7dbb;
 }
 
 .div-header h1 {
@@ -357,21 +357,21 @@ div.scrollmenu a:hover {
 .social_link a {
   margin: 3px;
   color: white;
-  border: 3px solid #0a26bb;
-  background-color: #0a26bb;
+  border: 3px solid #0a7dbb;
+  background-color: #0a7dbb;
   border-radius: 7px;
   font-size: xx-large;
 }
 
 .social_link a:hover {
   color: white;
-  border: 3px solid #1e39d0;
-  background-color: #1e39d0;
+  border: 3px solid #056395;
+  background-color: #056395;
 }
 
 .div-contact {
   text-align: center;
-  background-color: #0a26bb;
+  background-color: #0a7dbb;
 }
 
 .div-contact-flex {
@@ -390,7 +390,7 @@ div.scrollmenu a:hover {
 }
 
 .btn_mail_contact {
-  color: #0a26bb;
+  color: #0a7dbb;
   border: 5px solid white;
   background-color: white;
   text-decoration: none;
@@ -405,14 +405,14 @@ div.scrollmenu a:hover {
 }
 
 .btn_mail_contact:hover {
-  color: #0a26bb;
+  color: #0a7dbb;
   border: 5px solid #bdb7b7;
   background-color: #bdb7b7;
 }
 
 .btn_contact {
   margin: 3px;
-  color: #0a26bb;
+  color: #0a7dbb;
   border: 3px solid white;
   background-color: white;
   border-radius: 7px;
@@ -420,7 +420,7 @@ div.scrollmenu a:hover {
 }
 
 .btn_contact:hover {
-  color: #0a26bb;
+  color: #0a7dbb;
   border: 3px solid #bdb7b7;
   background-color: #bdb7b7;
 }

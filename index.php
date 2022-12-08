@@ -83,6 +83,8 @@
                         <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
 
                         <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
+
+                        <a target="_blank" href="https://codepen.io/Cut0x_"><i class="bi bi-file-code-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -99,11 +101,17 @@
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+
                 <a href="./project/devorion/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+
                 <a href="./project/php-template/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/php-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
+
+                <a href="./project/template-website/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/website-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>
@@ -156,6 +164,8 @@
                         <a target="_blank" href="https://www.twitch.tv/cut0x"><i class="bi bi-twitch"></i></a>
 
                         <a target="_blank" href="https://www.youtube.com/channel/UCzYSf-VLGKlqmnT6_E3hAXw"><i class="bi bi-youtube"></i></a>
+
+                        <a target="_blank" href="https://codepen.io/Cut0x_"><i class="bi bi-file-code-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -172,11 +182,17 @@
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+
                 <a href="./project/devorion/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/devorion.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
+
                 <a href="./project/php-template/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/php-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
+                </a>
+                
+                <a href="./project/template-website/?lang=<?= $lang; ?>">
+                    <img src="./assets/img/projects/website-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
         </div>

@@ -152,7 +152,7 @@
                         <img src="./assets/img/my-logo.png" alt="">
                         <i class="bi bi-arrow-return-right"></i> <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span> 
                     </h1>
-                    <p class="desciption">
+                    <p class="description">
                         Hello, I'm Cut0x, I'm 17 (soon to be 18). I have been a programming enthusiast for 10 years now (I started programming in 2012).
                         What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.
                     </p>
@@ -190,7 +190,7 @@
                 <a href="./project/php-template/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/php-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
-                
+
                 <a href="./project/template-website/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/website-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>

@@ -114,7 +114,7 @@
                     <img src="./assets/img/projects/website-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
-        </div>  
+        </div>   
 
         <div style="margin: 40px;"></div>
 

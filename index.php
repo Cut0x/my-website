@@ -96,7 +96,7 @@
         <div>
             <h2 style="padding-left: 10px;" id="projects">
                 Mes Projets :
-            </h2>
+            </h2> 
             <div class="scrollmenu">
                 <a href="./project/tranquillade-bot/?lang=<?= $lang; ?>">
                     <img src="./assets/img/projects/trklade-bot.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
@@ -114,7 +114,7 @@
                     <img src="./assets/img/projects/website-template.png" style="width: 350px; height: 205px; border-radius: 20px;" alt="">
                 </a>
             </div>
-        </div>   
+        </div>    
 
         <div style="margin: 40px;"></div>
 

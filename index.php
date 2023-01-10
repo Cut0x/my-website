@@ -1,9 +1,25 @@
 <?php
+	// PARAMETTRAGE LANGAGE
     $lang = $_GET['lang'];
 
     if (!$_GET['lang']) {
         header('location: ./?lang=en');
     };
+	
+	// DEFINITION TEXT PAR LANG
+	// Titre
+	$titre_fr = "Coucou, je suis Cut0x !";
+	$titre_en = "Hi, I'm Cut0x !";
+	// NavBar
+	$home_fr = "Acceuil";
+	$home_en = "Home";
+	$projects_fr = "Projets";
+	$projects_en = "Projects";
+	$_fr = "";
+	$_en = "";
+	// Bouton
+	$pass_fr = "Passer en Anglais";
+	$pass_en = "Switch to French";
 ?>
 
 <!DOCTYPE html>
@@ -15,13 +31,13 @@
 
     <title>
 	<?php if ($lang == "fr") {
-		echo "Coucou, je suis Cut0x !";
+		echo $titre_fr;
 	} else {
-		echo "Hi, I'm Cut0x !";
+		echo $titre_en;
 	}; ?>
 	</title>
 	
-	<link rel="stylesheet" href="./src/css/style.css"/>
+	<link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
 	<a href="#" class="btn">Test</a>

@@ -141,6 +141,32 @@ nav a:hover {
 	border-radius: 12px;
 }
 
+.social_links {
+    display: grid;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.link {
+    margin: 2px;
+    border: 3px solid #15252c;
+    width: 35px;
+    border-radius: 80px;
+    background-color: #15252c;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+} 
+
+.link a:hover {
+    border: 3px solid #212e33;
+    background-color: #212e33;
+    border-radius: 80px;
+    box-shadow: 5px 5px 5px black;
+} 
+
 @media (max-width:600px) {
 	.container {
 		display: grid;
@@ -150,4 +176,30 @@ nav a:hover {
 		width: 300px;
 		border-radius: 300px;
 	}
+
+    .social_links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .link {
+        margin: 20px;
+        border: 3px solid #15252c;
+        width: 55px;
+        border-radius: 80px;
+        background-color: #15252c;
+        font-size: 50px;
+    }
+    
+    .link a {
+        text-decoration: none;
+        color: white;
+    } 
+    
+    .link a:hover {
+        border: 3px solid #212e33;
+        background-color: #212e33;
+        border-radius: 80px;
+        box-shadow: 5px 5px 5px black;
+    } 
 }

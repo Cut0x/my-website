@@ -30,6 +30,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>
 	<?php if ($lang == "fr") {
 		echo $titre_fr;
@@ -43,7 +49,7 @@
 <body>
 <header>
         <nav>
-            <a class="logo" href="/">Cut0x</a>
+            <a class="logo" href="./">Cut0x</a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -82,17 +88,17 @@
         </div>
 
         <div class="obj">
+            <h1 class="cc">&nbsp;</h1>
             <div class="social_links">
-                <div class="link"><a href=""></a></div>
+                <div class="link"><a href="https://twitter.com/Cut0x_" target="_blank"><i class="bi bi-twitter"></i></a></div>
 
-                <div class="link"><a href=""></a></div>
+                <div class="link"><a href="https://github.com/Cut0x" target="_blank"><i class="bi bi-github"></i></a></div>
                 
-                <div class="link"><a href=""></a></div>
-                
-                <div class="link"><a href=""></a></div>
+                <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
             </div>
         </div>
     </div>
     <script src="./src/js/mobile-navbar.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

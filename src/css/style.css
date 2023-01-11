@@ -30,6 +30,7 @@ nav {
     align-items: center;
     background: #15252c;
     height: 8vh;
+    border-radius: 20px;
 }
 
 nav a {

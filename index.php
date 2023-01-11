@@ -16,11 +16,16 @@
 	$login_fr = "Connexion";
 	$login_en = "Log In";
 	// Bouton
-	$pass_fr = "Passer en Anglais";
-	$pass_en = "Switch to French";
+	$pass_fr = "Switch to English";
+	$pass_en = "Passer en Français";
     // Description
     $desc_fr = "Bonjour, je suis Cut0x, j'ai 17ans (bientôt 18ans). Je suis un passionné de programmation depuis maintenant 10ans (j'ai commencé la programmation en 2012). Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.";
     $desc_en = "Hello, I'm Cut0x, I'm 17 (soon to be 18). I have been a programming enthusiast for 10 years now (I started programming in 2012). What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.";
+    // Footer
+    $foot_p1_fr = "Développé avec";
+    $foot_p1_en = "Developed with";
+    $foot_p2_fr = "par <span style='color: #5865F2;'>Cut0x</span>";
+    $foot_p2_en = "by <span style='color: #5865F2;'>Cut0x</span>";
 ?>
 
 <!DOCTYPE html>
@@ -86,18 +91,43 @@
             <?php if ($lang == "fr") { echo $desc_fr; } else { echo $desc_en; }; ?>
             </p>
         </div>
-
-        <div class="obj">
-            <h1 class="cc">&nbsp;</h1>
-            <div class="social_links">
-                <div class="link"><a href="https://twitter.com/Cut0x_" target="_blank"><i class="bi bi-twitter"></i></a></div>
-
-                <div class="link"><a href="https://github.com/Cut0x" target="_blank"><i class="bi bi-github"></i></a></div>
-                
-                <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
-            </div>
-        </div>
     </div>
+
+    <div class="social_links">
+        <div class="link"><a href="https://twitter.com/Cut0x_" target="_blank"><i class="bi bi-twitter"></i></a></div>
+
+        <div class="link"><a href="https://github.com/Cut0x" target="_blank"><i class="bi bi-github"></i></a></div>
+
+        <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
+    </div>
+
+    <div style="margin: 65px;"></div>
+
+    <div id="article"></div>
+
+    <div style="margin: 445px;"></div>
+
+    <div class="last_article">
+        <h1> <a href="#article"><i class="bi bi-arrow-down-circle-fill"></i></a> Dernier article publié</h1>
+        <a href="#">
+            <div class="article">
+                <h1>
+                    Comment faire du montage ?
+                </h1>
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, velit reiciendis placeat voluptatum voluptatibus quam maiores recusandae, sit aliquid, hic ullam. Fugiat quasi ratione, corrupti exercitationem nam illo vel facere.
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div style="margin: 600px;"></div>
+
+    <div class="footer">
+        <?php if ($lang == "fr") { echo $foot_p1_fr; } else { echo $foot_p1_en; }; ?> <span style="color: orangered"><i class="bi bi-heart-fill"></i></span> <?php if ($lang == "fr") { echo $foot_p2_fr; } else { echo $foot_p2_en; }; ?> 
+    </div>
+
     <script src="./src/js/mobile-navbar.js"></script>
     <script src="./src/js/script.js"></script>
 </body>

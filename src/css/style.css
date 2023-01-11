@@ -130,28 +130,32 @@ nav a:hover {
 }
 
 .obj img {
-    border-radius: 80px;
-    width: 80px;
+    border-radius: 180px;
+    width: 180px;
+}
+
+.obj h1 {
+    font-size: 80px;
 }
 
 .obj p {
-    width: 300px;
+    width: 420px;
+    font-size: 20px;
 	background-color: #333;
 	border: 7px solid #333;
 	border-radius: 12px;
 }
 
 .social_links {
-    display: grid;
+    display: flex;
     justify-content: center;
-    font-size: xx-large;
+    font-size: 40px;
 }
 
 .link {
     margin: 2px;
-    border: 3px solid #15252c;
-    width: 35px;
-    border-radius: 80px;
+    border: 4px solid #15252c;
+    border-radius: 100px;
     background-color: #15252c;
 }
 
@@ -167,9 +171,33 @@ nav a:hover {
     box-shadow: 5px 5px 5px black;
 } 
 
+.last_article {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.last_article a {
+    width: 740px;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: #212e33;
+    font-size: 25px;
+    border: 4px solid #212e33;
+    border-radius: 20px;
+}
+
+.last_article a:hover {
+    box-shadow: 5px 5px 5px black;
+}
+
 @media (max-width:600px) {
 	.container {
 		display: grid;
+        justify-content: center;
+        text-align: center;
 	}
 
 	.obj img {
@@ -185,7 +213,6 @@ nav a:hover {
     .link {
         margin: 20px;
         border: 3px solid #15252c;
-        width: 55px;
         border-radius: 80px;
         background-color: #15252c;
         font-size: 50px;
@@ -201,5 +228,25 @@ nav a:hover {
         background-color: #212e33;
         border-radius: 80px;
         box-shadow: 5px 5px 5px black;
-    } 
+    }
+
+    .last_article a {
+        width: 400px;
+        display: grid;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: #212e33;
+        font-size: 20px;
+        border: 4px solid #212e33;
+        border-radius: 20px;
+    }
+}
+
+.footer {
+    text-align: center;
+    background-color: #212e33;
+    padding: 20px;
+    border-radius: 35px;
+    font-size: xx-large;
 }

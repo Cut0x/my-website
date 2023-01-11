@@ -133,3 +133,21 @@ nav a:hover {
     border-radius: 80px;
     width: 80px;
 }
+
+.obj p {
+    width: 300px;
+	background-color: #333;
+	border: 7px solid #333;
+	border-radius: 12px;
+}
+
+@media (max-width:600px) {
+	.container {
+		display: grid;
+	}
+
+	.obj img {
+		width: 300px;
+		border-radius: 300px;
+	}
+}

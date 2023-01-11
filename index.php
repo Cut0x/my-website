@@ -1,12 +1,12 @@
 <?php
-	// PARAMETTRAGE LANGAGE
+	/*          PARAMETTRAGE LANGAGE          */
     $lang = $_GET['lang'];
 
     if (!$_GET['lang']) {
         header('location: ./?lang=en');
     };
 	
-	// DEFINITION TEXT PAR LANG
+	/*          DEFINITION TEXT PAR LANG          */
 	// Titre
 	$titre_fr = "Coucou, je suis Cut0x !";
 	$titre_en = "Hi, I'm Cut0x !";
@@ -18,6 +18,9 @@
 	// Bouton
 	$pass_fr = "Passer en Anglais";
 	$pass_en = "Switch to French";
+    // Description
+    $desc_fr = "Bonjour, je suis Cut0x, j'ai 17ans (bientôt 18ans). Je suis un passionné de programmation depuis maintenant 10ans (j'ai commencé la programmation en 2012). Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.";
+    $desc_en = "Hello, I'm Cut0x, I'm 17 (soon to be 18). I have been a programming enthusiast for 10 years now (I started programming in 2012). What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.";
 ?>
 
 <!DOCTYPE html>
@@ -72,6 +75,22 @@
             <h1>
                 <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span>
             </h1>
+
+            <p>
+            <?php if ($lang == "fr") { echo $desc_fr; } else { echo $desc_en; }; ?>
+            </p>
+        </div>
+
+        <div class="obj">
+            <div class="social_links">
+                <div class="link"><a href=""></a></div>
+
+                <div class="link"><a href=""></a></div>
+                
+                <div class="link"><a href=""></a></div>
+                
+                <div class="link"><a href=""></a></div>
+            </div>
         </div>
     </div>
     <script src="./src/js/mobile-navbar.js"></script>

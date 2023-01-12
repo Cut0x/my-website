@@ -26,6 +26,9 @@
     $foot_p1_en = "Developed with";
     $foot_p2_fr = "par <span style='color: #5865F2;'>Cut0x</span>";
     $foot_p2_en = "by <span style='color: #5865F2;'>Cut0x</span>";
+
+    /** MON TAG DISCORD **/
+    $tag = "5669";
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +87,7 @@
 
         <div class="obj">
             <h1>
-                <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;">0001</span>
+                <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;"><?= $tag; ?></span>
             </h1>
 
             <p>

@@ -36,10 +36,17 @@ nav {
 nav a {
 	text-decoration: none;
 	color: white;
+    border: 3px solid #04040c;
+    border-radius: 20px;
+    background-color: #04040c;
+    padding: 4px;
 }
 
 nav a:hover {
-	text-decoration: underline;
+    border: 3px solid #0a0a19;
+    border-radius: 20px;
+    background-color: #0a0a19;
+    padding: 4px;
 }
 
 .nav-list {

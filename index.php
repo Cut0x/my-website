@@ -101,14 +101,10 @@
         <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
     </div>
 
-    <div style="margin: 65px;"></div>
-
-    <div id="article"></div>
-
     <div style="margin: 400px;"></div>
 
     <div class="last_article">
-        <h1> <a href="#article"><i class="bi bi-arrow-down-circle-fill"></i></a> Dernier article publié</h1>
+        <h1>Dernier article publié</h1>
         <a href="#">
             <div class="article">
                 <h1>
@@ -122,7 +118,7 @@
         </a>
     </div>
 
-    <div style="margin: 600px;"></div>
+    <div style="margin: 150px;"></div>
 
     <div class="footer">
         <?php if ($lang == "fr") { echo $foot_p1_fr; } else { echo $foot_p1_en; }; ?> <span style="color: orangered"><i class="bi bi-heart-fill"></i></span> <?php if ($lang == "fr") { echo $foot_p2_fr; } else { echo $foot_p2_en; }; ?> 

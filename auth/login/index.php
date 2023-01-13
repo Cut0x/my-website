@@ -120,16 +120,17 @@
 
     <div class="container_form">
         <form method="post">
-            <div>
-                <h1>
-                    <?php if ($lang == "fr") { echo $titre_fr; } else { echo $titre_en; }; ?>
-                </h1>
-            </div>
             <?php if(isset($errorMsg)) { foreach($errorMsg as $error) { ?>
     	        <div class="error">
 		            <strong><i class="bi bi-exclamation-circle-fill"></i></strong> <?php echo $error; ?>
 		        </div>
             <?php } }; ?>
+
+            <div>
+                <h1>
+                    <?php if ($lang == "fr") { echo $titre_fr; } else { echo $titre_en; }; ?>
+                </h1>
+            </div>
 
             <div style="margin: 20px;"></div>
 
@@ -139,12 +140,16 @@
 
             <div style="margin: 20px;"></div>
 
-            <div class="error"></div>
+            <div class="lab">
+                <input type="password" name="btn_password" id="password" placeholder="Password"><span>*</span>
+            </div>
 
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="password" name="btn_password" id="password" placeholder="Password"><span>*</span>
+                <span>
+                    * required
+                </span>
             </div>
 
             <div style="margin: 20px;"></div>

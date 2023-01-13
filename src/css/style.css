@@ -312,6 +312,9 @@ form input[type=submit]:hover {
 .error {
     background-color: orangered;
     color: white;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 20px;
 }
 
 .error strong {

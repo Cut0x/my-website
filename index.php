@@ -5,6 +5,23 @@
     if (!$_GET['lang']) {
         header('location: ./?lang=en');
     };
+
+    require_once './src/data/sql/data.php';
+				
+    session_start();
+
+    if (isset($_SESSION['user_login'])) {
+        $id = $_SESSION['user_login'];
+                    
+        $select_stmt = $db -> prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+        $select_stmt -> execute(
+            array(
+                ":uid" => $id
+            )
+        );
+        
+        $row = $select_stmt -> fetch(PDO::FETCH_ASSOC);
+    };
 	
 	/*          DEFINITION TEXT PAR LANG          */
 	// Titre
@@ -76,7 +93,12 @@
                 <li><a href="./contact/?lang=<?= $lang; ?>"><i class="bi bi-envelope-fill"></i> Contact</a></li>
                 <li><a href="./blog/?lang=<?= $lang; ?>"><i class="bi bi-chat-right-fill"></i> Blog</a></li>
                 <li><a href="./projects/?lang=<?= $lang; ?>"><i class="bi bi-file-code-fill"></i> <?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
-                <li><a href="./auth/login/?lang=<?= $lang; ?>"><i class="bi bi-box-arrow-in-right"></i> <?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
+                <li><?php if (isset($_SESSION['user_login'])) { ?>
+                    <a href="./profil/"><i class="bi bi-person-circle"></i> <?= $row['pseudo']; ?></a>
+                <?php } else { ?>
+                    <a href="./auth/login/?lang=<?= $lang; ?>"><i class="bi bi-box-arrow-in-right"></i> <?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
+                <?php }; ?>
+                
             </ul>
         </nav>
     </header>

@@ -262,3 +262,49 @@ nav a:hover {
 .btn_div {
     text-align: center;
 }
+
+.container_form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: #04040c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+}
+
+form h1 {
+    font-size: 60px;
+}
+
+form span {
+    font-size: 30px;
+    color: red;
+}
+
+form input[type=text] {
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+form input[type=password] {
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+form input[type=submit] {
+    background-color: #15252c;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #15252c;
+}
+
+form input[type=submit]:hover {
+    color: white;
+    background-color: #04040c;
+    box-shadow: 5px 5px 5px #04040c;
+}

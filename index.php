@@ -32,6 +32,9 @@
     // Article
     $arti_fr = "Dernier article publié";
     $arti_en = "Last article post";
+    // Blog
+    $go_b_fr = "Aller sur le blog";
+    $go_b_en = "Go to see the blog";
 
     /** MON TAG DISCORD **/
     $tag = "5669";
@@ -63,16 +66,16 @@
 <body>
 <header>
         <nav>
-            <a class="logo" href="./">Cut0x</a>
+            <a class="logo" href="./?lang=<?= $lang; ?>">Cut0x</a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>  
             </div>
             <ul class="nav-list">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#"><?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
+                <li><a href="./contact/?lang=<?= $lang; ?>">Contact</a></li>
+                <li><a href="./blog/?lang=<?= $lang; ?>">Blog</a></li>
+                <li><a href="./projects/?lang=<?= $lang; ?>"><?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
                 <li><a href="./auth/login/?lang=<?= $lang; ?>"><?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
             </ul>
         </nav>
@@ -113,7 +116,7 @@
     <div style="margin: 18px;"></div>
 
     <div class="btn_div">
-        <a href="./about" class="btn">
+        <a href="./about/?lang=<?= $lang; ?>" class="btn">
             <?php if ($lang == "fr") { echo $about_fr; } else { echo $about_en; }; ?>
         </a>
     </div>
@@ -132,6 +135,14 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, velit reiciendis placeat voluptatum voluptatibus quam maiores recusandae, sit aliquid, hic ullam. Fugiat quasi ratione, corrupti exercitationem nam illo vel facere.
                 </p>
             </div>
+        </a>
+    </div>
+    
+    <div style="margin: 18px;"></div>
+
+    <div class="btn_div">
+        <a href="./blog/?lang=<?= $lang; ?>" class="btn">
+            <?php if ($lang == "fr") { echo $go_b_fr; } else { echo $go_b_en; }; ?>
         </a>
     </div>
 

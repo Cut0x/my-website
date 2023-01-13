@@ -32,6 +32,9 @@
     $foot_p1_en = "Developed with";
     $foot_p2_fr = "par <span style='color: #5865F2;'>Cut0x</span>";
     $foot_p2_en = "by <span style='color: #5865F2;'>Cut0x</span>";
+    // Require
+    $req_fr = "Requis";
+    $req_en = "Required";
 
     /* CODE DU SYSTEME DE CONNEXION */
     if(isset($_REQUEST['btn_login'])) {
@@ -148,14 +151,14 @@
 
             <div class="lab">
                 <span>
-                    * required
+                    * <?php if ($lang == "fr") { echo $req_fr; } else { echo $req_en; }; ?>
                 </span>
             </div>
 
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="submit" name="btn_login" id="" value="Log In">
+                <input type="submit" name="btn_login" id="" value="<?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?>">
             </div>
         </form>
     </div>

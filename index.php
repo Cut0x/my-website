@@ -26,6 +26,12 @@
     $foot_p1_en = "Developed with";
     $foot_p2_fr = "par <span style='color: #5865F2;'>Cut0x</span>";
     $foot_p2_en = "by <span style='color: #5865F2;'>Cut0x</span>";
+    // Btn about
+    $about_fr = "À propos de moi";
+    $about_en = "About me";
+    // Article
+    $arti_fr = "Dernier article publié";
+    $arti_en = "Last article post";
 
     /** MON TAG DISCORD **/
     $tag = "5669";
@@ -103,11 +109,19 @@
 
         <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
     </div>
+    
+    <div style="margin: 18px;"></div>
+
+    <div class="btn_div">
+        <a href="./about" class="btn">
+            <?php if ($lang == "fr") { echo $about_fr; } else { echo $about_en; }; ?>
+        </a>
+    </div>
 
     <div style="margin: 400px;"></div>
 
     <div class="last_article">
-        <h1>Dernier article publié</h1>
+        <h1><?php if ($lang == "fr") { echo $arti_fr; } else { echo $arti_en; }; ?></h1>
         <a href="#">
             <div class="article">
                 <h1>

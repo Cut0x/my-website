@@ -258,3 +258,7 @@ nav a:hover {
     border-radius: 35px;
     font-size: xx-large;
 }
+
+.btn_div {
+    text-align: center;
+}

@@ -98,7 +98,7 @@
                 <li><a href="../blog/?lang=<?= $lang; ?>"><i class="bi bi-chat-right-fill"></i> Blog</a></li>
                 <li><a href="../projects/?lang=<?= $lang; ?>"><i class="bi bi-file-code-fill"></i> <?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
                 <li><?php if (isset($_SESSION['user_login'])) { ?>
-                    <a href="./"><i class="bi bi-person-circle"></i> <?= $row['pseudo']; ?></a>
+                    <a href="./?lang=<?= $lang; ?>"><i class="bi bi-person-circle"></i> <?= $row['pseudo']; ?></a>
                 <?php } else { ?>
                     <a href="../auth/login/?lang=<?= $lang; ?>"><i class="bi bi-box-arrow-in-right"></i> <?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
                 <?php }; ?>

@@ -1,4 +1,13 @@
 <?php
+    /* CONFIGURATION ET RECUPE DONNEE SESSION */
+    require_once '../../src/data/sql/data.php';
+				
+    session_start();
+
+    if (isset($_SESSION['user_login'])) {
+        header("location: ../../");
+    };
+
 	/*          PARAMETTRAGE LANGAGE          */
     $lang = $_GET['lang'];
 
@@ -23,6 +32,41 @@
     $foot_p1_en = "Developed with";
     $foot_p2_fr = "par <span style='color: #5865F2;'>Cut0x</span>";
     $foot_p2_en = "by <span style='color: #5865F2;'>Cut0x</span>";
+
+    /* CODE DU SYSTEME DE CONNEXION */
+    if(isset($_REQUEST['btn_login'])) {
+	    $username = strip_tags($_REQUEST["btn_username"]);
+	    $password = strip_tags($_REQUEST["btn_password"]);
+    
+        try {
+            $select_stmt = $db -> prepare("SELECT * FROM tbl_user WHERE username=:uname");
+            $select_stmt -> execute(
+                array(
+                    ':uname' => $username
+                )
+            );
+            $row = $select_stmt -> fetch(PDO::FETCH_ASSOC);
+        
+            if ($select_stmt -> rowCount() > 0) {
+                if ($username == $row["username"]) {
+                    if (password_verify($password, $row["password"])) {
+                        $_SESSION["user_login"] = $row["user_id"];
+                    
+                        $loginMsg = 'Succès de connexion !';
+                        header("location: ../../");
+                    } else {
+                        $errorMsg[] = "Mauvais mot de passe";
+                    }
+                } else {
+                    $errorMsg[] = "Mauvais pseudo";
+                }
+            } else {
+                $errorMsg[] = "Aucun compte n'existe sous ce pseudo";
+            }
+        } catch(PDOException $e) {
+            $e -> getMessage();
+        };
+    };
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +125,11 @@
                     <?php if ($lang == "fr") { echo $titre_fr; } else { echo $titre_en; }; ?>
                 </h1>
             </div>
+            <?php if(isset($errorMsg)) { foreach($errorMsg as $error) { ?>
+    	        <div class="error">
+		            <strong><i class="bi bi-exclamation-circle-fill"></i></strong> <?php echo $error; ?>
+		        </div>
+            <?php } }; ?>
 
             <div style="margin: 20px;"></div>
 
@@ -101,7 +150,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="submit" name="" id="" value="Log In">
+                <input type="submit" name="btn_login" id="" value="Log In">
             </div>
         </form>
     </div>

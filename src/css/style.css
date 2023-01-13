@@ -308,3 +308,12 @@ form input[type=submit]:hover {
     background-color: #04040c;
     box-shadow: 5px 5px 5px #04040c;
 }
+
+.error {
+    background-color: orangered;
+    color: white;
+}
+
+.error strong {
+    color: red;
+}

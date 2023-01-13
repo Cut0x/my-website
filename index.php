@@ -73,10 +73,10 @@
                 <div class="line3"></div>  
             </div>
             <ul class="nav-list">
-                <li><a href="./contact/?lang=<?= $lang; ?>">Contact</a></li>
-                <li><a href="./blog/?lang=<?= $lang; ?>">Blog</a></li>
-                <li><a href="./projects/?lang=<?= $lang; ?>"><?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
-                <li><a href="./auth/login/?lang=<?= $lang; ?>"><?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
+                <li><a href="./contact/?lang=<?= $lang; ?>"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+                <li><a href="./blog/?lang=<?= $lang; ?>"><i class="bi bi-chat-right-fill"></i> Blog</a></li>
+                <li><a href="./projects/?lang=<?= $lang; ?>"><i class="bi bi-file-code-fill"></i> <?php if ($lang == "fr") { echo $projects_fr; } else { echo $projects_en; }; ?></a></li>
+                <li><a href="./auth/login/?lang=<?= $lang; ?>"><i class="bi bi-box-arrow-in-right"></i> <?php if ($lang == "fr") { echo $login_fr; } else { echo $login_en; }; ?></a></li>
             </ul>
         </nav>
     </header>

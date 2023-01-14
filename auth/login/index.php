@@ -5,7 +5,7 @@
     session_start();
 
     if (isset($_SESSION['user_login'])) {
-        header("location: ../../");
+        header("location: ../../".$lang);
     };
 
 	/*          PARAMETTRAGE LANGAGE          */
@@ -56,7 +56,7 @@
                         $_SESSION["user_login"] = $row["user_id"];
                     
                         $loginMsg = 'Succès de connexion !';
-                        header("location: ../../");
+                        header("location: ../../".$lang);
                     } else {
                         $errorMsg[] = "Mauvais mot de passe";
                     }

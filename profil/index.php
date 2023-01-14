@@ -110,7 +110,7 @@
 
     <div style="text-align: center;">
         <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
-        <a href="../auth/logout/" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
+        <a href="../auth/logout/<?= $lang; ?>" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
     </div>
     
     <div style="margin: 200px;"></div>
@@ -132,11 +132,21 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
+                <input type="text" name="btn_title_fr" id="" placeholder="Titre en français"><span>*</span>
+                <input type="text" name="btn_title_en" id="" placeholder="Title in English"><span>*</span>
             </div>
 
             <div style="margin: 20px;"></div>
 
             <div class="lab">
+                <textarea name="btn_content_fr" id="" cols="30" rows="10" placeholder="Contenu en Français"></textarea>
+                <textarea name="btn_content_en" id="" cols="30" rows="10" placeholder="Content in English"></textarea>
+            </div>
+
+            <div style="margin: 20px;"></div>
+
+            <div class="lab">
+                <input type="file" name="btn_file" id="">
             </div>
 
             <div style="margin: 20px;"></div>
@@ -150,7 +160,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="submit" name="btn_login" id="" value="<?php if ($lang == "fr") { echo $send_fr; } else { echo $send_en; }; ?>">
+                <input type="submit" name="btn_send" id="" value="<?php if ($lang == "fr") { echo $send_fr; } else { echo $send_en; }; ?>">
             </div>
         </form>
     </div>

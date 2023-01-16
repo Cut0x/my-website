@@ -94,6 +94,25 @@
         } else {
             if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_en;
             if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_en;
+    
+            try {
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt -> execute(
+                    array(
+                        $title_fr,
+                        $title_en,
+                        $content_fr,
+                        $content_en,
+                        $row['user_id']
+                    )
+                );
+
+                $lastId = $db -> lastInsertId();
+                
+                header('location: ../blog/?lang='.$lang.'&art='.$lastId);
+            } catch(PDOException $e) {
+                $e -> getMessage();
+            };
         }
     };
 ?>

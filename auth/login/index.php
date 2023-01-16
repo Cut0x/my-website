@@ -56,7 +56,7 @@
                         $_SESSION["user_login"] = $row["user_id"];
                     
                         $loginMsg = 'Succès de connexion !';
-                        header("location: ../../".$lang);
+                        header("location: ../../?lang=".$lang);
                     } else {
                         $errorMsg[] = "Mauvais mot de passe";
                     }

@@ -1,6 +1,7 @@
 <?php
     /* CONFIGURATION ET RECUPE DONNEE SESSION */
     require_once '../src/data/sql/data.php';
+    require_once '../src/data/config.php';
 				
     session_start();
 
@@ -54,10 +55,121 @@
     // Log Out
 	$logout_fr = "Déconnexion";
 	$logout_en = "Log Out";
+    // Message error title
+    $error_title_fr = "Erreur 1";
+    $error_title_en = "Error 1";
+    // Message error content
+    $error_content_fr = "Erreur 2";
+    $error_content_en = "Error 2";
 
     /* CODE DU SYSTEME DE CONNEXION */
     if(isset($_REQUEST['btn_send'])) {
-        // code
+        $title_fr = strip_tags($_REQUEST['btn_title_fr']);
+        $title_en = strip_tags($_REQUEST['btn_title_en']);
+
+        $content_fr = strip_tags($_REQUEST['btn_content_fr']);
+        $content_en = strip_tags($_REQUEST['btn_content_en']);
+
+        if ($lang == "fr") {
+            if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_fr;
+            if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_fr;
+    
+            try {
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt -> execute(
+                    array(
+                        $title_fr,
+                        $title_en,
+                        $content_fr,
+                        $content_en,
+                        $row['user_id']
+                    )
+                );
+
+                $lastId = $db -> lastInsertId();
+                
+                header('location: ../blog/?lang='.$lang.'&art='.$lastId);
+            } catch(PDOException $e) {
+                $e -> getMessage();
+            };
+        } else {
+            if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_en;
+            if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_en;
+    
+            try {
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt -> execute(
+                    array(
+                        $title_fr,
+                        $title_en,
+                        $content_fr,
+                        $content_en,
+                        $row['user_id']
+                    )
+                );
+
+                $lastId = $db -> lastInsertId();
+        
+                if (isset($_FILES)) {
+                    var_dump($_FILES["miniature"]["tmp_name"]);
+                    $chemin = 'uploads/'.$lastId.'.jpg';
+        
+                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
+                } else {
+                    //echo "pas yeah";
+                };
+                
+                header('location: ../blog/?lang=fr&art='.$lastId);
+            } catch(PDOException $e) {
+                $e -> getMessage();
+            };
+        }
+        
+        $url = $webhookURL;
+
+        $embedDiscord = substr($content_fr, 0, 231);
+        
+        $hookObject = json_encode([
+            //"username" => "Nouvelle publication !",
+            
+            //"avatar_url" => "https://cdn.discordapp.com/attachments/914271938359210045/980928769588072478/LOGO-DEVORION-1.png",
+            
+            "tts" => false,
+            
+            "embeds" => [
+                [
+                    "title" => $title_fr,
+                    
+                    "type" => "rich",
+                    
+                    "description" => $embedDiscord."...",
+                    
+                    "url" => 'https://cutox.alwaysdata.net/blog/?lang='.$lang.'&art='.$lastId,
+                    
+                    "color" => hexdec('#15252c'),
+                    
+                    "image" => [
+                        "url" => "https://cutox.alwaysdata.net/profil/uploads/".$lastid.".jpg"
+                    ],
+
+                    "author" => [
+                        "name" => "Publié par ".$row['pseudo']
+                    ],
+                ]
+            ]
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+            
+        $headers = [ 'Content-Type: application/json; charset=utf-8' ];
+        $POST = [ 'username' => 'Testing BOT', 'content' => 'Testing message' ];
+           
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $hookObject);
+        $response   = curl_exec($ch);
     };
 ?>
 
@@ -132,7 +244,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="text" name="btn_title_fr" id="" placeholder="Titre en français"><span>*</span>
+                <input type="text" name="btn_title_fr" id="" placeholder="Titre en Français"><span>*</span>
                 <input type="text" name="btn_title_en" id="" placeholder="Title in English"><span>*</span>
             </div>
 
@@ -146,7 +258,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="file" name="btn_file" id="">
+                <input name='miniature' type='file' accept='image/jpg'>
             </div>
 
             <div style="margin: 20px;"></div>

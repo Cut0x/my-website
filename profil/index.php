@@ -111,10 +111,10 @@
                 $lastId = $db -> lastInsertId();
         
                 if (isset($_FILES)) {
-                    var_dump($_FILES["btn_file"]["tmp_name"]);
+                    var_dump($_FILES["miniature"]["tmp_name"]);
                     $chemin = 'uploads/'.$lastId.'.jpg';
         
-                    move_uploaded_file($_FILES['btn_file']['tmp_name'], $chemin);
+                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
                 } else {
                     //echo "pas yeah";
                 };
@@ -258,7 +258,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input name='btn_file' type='file' accept='image/jpg'>
+                <input name='miniature' type='file' accept='image/jpg'>
             </div>
 
             <div style="margin: 20px;"></div>

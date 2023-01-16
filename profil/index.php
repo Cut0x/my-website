@@ -111,15 +111,15 @@
                 $lastId = $db -> lastInsertId();
         
                 if (isset($_FILES)) {
-                    var_dump($_FILES["miniature"]["tmp_name"]);
+                    var_dump($_FILES["btn_file"]["tmp_name"]);
                     $chemin = 'uploads/'.$lastId.'.jpg';
         
-                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
+                    move_uploaded_file($_FILES['btn_file']['tmp_name'], $chemin);
                 } else {
                     //echo "pas yeah";
                 };
                 
-                header('location: ../blog/?lang='.$lang.'&art='.$lastId);
+                header('location: ../blog/?lang=fr&art='.$lastId);
             } catch(PDOException $e) {
                 $e -> getMessage();
             };
@@ -130,15 +130,15 @@
         $embedDiscord = substr($content_fr, 0, 231);
         
         $hookObject = json_encode([
-            "username" => "Nouvelle publication !",
+            //"username" => "Nouvelle publication !",
             
-            "avatar_url" => "https://cdn.discordapp.com/attachments/914271938359210045/980928769588072478/LOGO-DEVORION-1.png",
+            //"avatar_url" => "https://cdn.discordapp.com/attachments/914271938359210045/980928769588072478/LOGO-DEVORION-1.png",
             
             "tts" => false,
             
             "embeds" => [
                 [
-                    "title" => $title,
+                    "title" => $title_fr,
                     
                     "type" => "rich",
                     
@@ -258,7 +258,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="file" name="btn_file" id="">
+                <input name='btn_file' type='file' accept='image/jpg'>
             </div>
 
             <div style="margin: 20px;"></div>

@@ -54,10 +54,47 @@
     // Log Out
 	$logout_fr = "Déconnexion";
 	$logout_en = "Log Out";
+    // Message error title
+    $error_title_fr = "Erreur 1";
+    $error_title_en = "Error 1";
+    // Message error content
+    $error_content_fr = "Erreur 2";
+    $error_content_en = "Error 2";
 
     /* CODE DU SYSTEME DE CONNEXION */
     if(isset($_REQUEST['btn_send'])) {
-        // code
+        $title_fr = strip_tags($_REQUEST['btn_title_fr']);
+        $title_en = strip_tags($_REQUEST['btn_title_en']);
+
+        $content_fr = strip_tags($_REQUEST['btn_content_fr']);
+        $content_en = strip_tags($_REQUEST['btn_content_en']);
+
+        if ($lang == "fr") {
+            if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_fr;
+            if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_fr;
+    
+            try {
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt -> execute(
+                    array(
+                        $title_fr,
+                        $title_en,
+                        $content_fr,
+                        $content_en,
+                        $row['user_id']
+                    )
+                );
+
+                $lastId = $db -> lastInsertId();
+                
+                header('location: ../blog/?lang='.$lang.'&art='.$lastId);
+            } catch(PDOException $e) {
+                $e -> getMessage();
+            };
+        } else {
+            if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_en;
+            if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_en;
+        }
     };
 ?>
 

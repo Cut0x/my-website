@@ -1,6 +1,7 @@
 <?php
     /* CONFIGURATION ET RECUPE DONNEE SESSION */
     require_once '../src/data/sql/data.php';
+    require_once '../src/data/config.php';
 				
     session_start();
 
@@ -108,12 +109,67 @@
                 );
 
                 $lastId = $db -> lastInsertId();
+        
+                if (isset($_FILES)) {
+                    var_dump($_FILES["miniature"]["tmp_name"]);
+                    $chemin = 'uploads/'.$lastId.'.jpg';
+        
+                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
+                } else {
+                    //echo "pas yeah";
+                };
                 
                 header('location: ../blog/?lang='.$lang.'&art='.$lastId);
             } catch(PDOException $e) {
                 $e -> getMessage();
             };
         }
+        
+        $url = $webhookURL;
+
+        $embedDiscord = substr($content_fr, 0, 231);
+        
+        $hookObject = json_encode([
+            "username" => "Nouvelle publication !",
+            
+            "avatar_url" => "https://cdn.discordapp.com/attachments/914271938359210045/980928769588072478/LOGO-DEVORION-1.png",
+            
+            "tts" => false,
+            
+            "embeds" => [
+                [
+                    "title" => $title,
+                    
+                    "type" => "rich",
+                    
+                    "description" => $embedDiscord."...",
+                    
+                    "url" => 'https://cutox.alwaysdata.net/blog/?lang='.$lang.'&art='.$lastId,
+                    
+                    "color" => hexdec('#15252c'),
+                    
+                    "image" => [
+                        "url" => "https://cutox.alwaysdata.net/profil/uploads/".$lastid.".jpg"
+                    ],
+
+                    "author" => [
+                        "name" => "Publié par ".$row['pseudo']
+                    ],
+                ]
+            ]
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+            
+        $headers = [ 'Content-Type: application/json; charset=utf-8' ];
+        $POST = [ 'username' => 'Testing BOT', 'content' => 'Testing message' ];
+           
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $hookObject);
+        $response   = curl_exec($ch);
     };
 ?>
 
@@ -188,7 +244,7 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input type="text" name="btn_title_fr" id="" placeholder="Titre en français"><span>*</span>
+                <input type="text" name="btn_title_fr" id="" placeholder="Titre en Français"><span>*</span>
                 <input type="text" name="btn_title_en" id="" placeholder="Title in English"><span>*</span>
             </div>
 

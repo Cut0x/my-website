@@ -10,6 +10,4 @@
     } catch(PDOEXCEPTION $e) {
 	    $e->getMessage();
     }
-
-    $webhookURL = "";
 ?>

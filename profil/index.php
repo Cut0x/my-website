@@ -69,19 +69,22 @@
 
         $content_fr = strip_tags($_REQUEST['btn_content_fr']);
         $content_en = strip_tags($_REQUEST['btn_content_en']);
+        
+        $image_url = strip_tags($_REQUEST['btn_image_url']);
 
         if ($lang == "fr") {
             if (strlen($title_fr) && strlen($title_en) < 5) $errorMsg[] = $error_title_fr;
             if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_fr;
     
             try {
-                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, url_image, authorId, date_publication) VALUES (?, ?, ?, ?, ?, ?, NOW())");
                 $select_stmt -> execute(
                     array(
                         $title_fr,
                         $title_en,
                         $content_fr,
                         $content_en,
+                        $image_url,
                         $row['user_id']
                     )
                 );
@@ -97,7 +100,7 @@
             if (strlen($content_fr) && strlen($content_en) < 20) $errorMsg[] = $error_content_en;
     
             try {
-                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, authorId, date_publication) VALUES (?, ?, ?, ?, ?, NOW())");
+                $select_stmt = $db -> prepare("INSERT INTO article (title_content_fr, title_content_en, body_content_fr, body_content_en, url_image, authorId, date_publication) VALUES (?, ?, ?, ?, ?, ?, NOW())");
                 $select_stmt -> execute(
                     array(
                         $title_fr,
@@ -109,15 +112,6 @@
                 );
 
                 $lastId = $db -> lastInsertId();
-        
-                if (isset($_FILES)) {
-                    var_dump($_FILES["miniature"]["tmp_name"]);
-                    $chemin = './uploads/'.$lastId.'.jpg';
-        
-                    move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
-                } else {
-                    //echo "pas yeah";
-                };
                 
                 header('location: ../blog/?lang=fr&art='.$lastId);
             } catch(PDOException $e) {
@@ -251,14 +245,14 @@
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <textarea name="btn_content_fr" id="" cols="30" rows="10" placeholder="Contenu en Français"></textarea>
-                <textarea name="btn_content_en" id="" cols="30" rows="10" placeholder="Content in English"></textarea>
+                <textarea name="btn_content_fr" id="" cols="30" rows="10" placeholder="Contenu en Français"></textarea><span>*</span>
+                <textarea name="btn_content_en" id="" cols="30" rows="10" placeholder="Content in English"></textarea><span>*</span>
             </div>
 
             <div style="margin: 20px;"></div>
 
             <div class="lab">
-                <input name='miniature' type='file' accept='image/jpg'>
+                <input type="text" name="btn_image_url" id="" placeholder="https://exemple.com/img.png"><span>*</span>
             </div>
 
             <div style="margin: 20px;"></div>

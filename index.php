@@ -149,7 +149,7 @@
 
     <div class="last_article">
         <h1><?php if ($lang == "fr") { echo $arti_fr; } else { echo $arti_en; }; ?></h1>
-        <a href="#">
+        <a href="./blog/?lang=<?= $lang; ?>&art=<?php echo '1'; ?>">
             <div class="article">
                 <h1>
                     Comment faire du montage ?

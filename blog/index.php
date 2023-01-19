@@ -117,6 +117,11 @@
     
     <div style="margin: 200px;"></div>
 
+    <?php if (isset($_GET['art'])) { ?>
+        <!-- -->
+    <?php } else { ?>
+        <!-- -->
+    <?php }; ?>
     <div class="container_form">
     </div>
 

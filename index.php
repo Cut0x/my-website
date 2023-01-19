@@ -133,6 +133,8 @@
         <div class="link"><a href="https://github.com/Cut0x" target="_blank"><i class="bi bi-github"></i></a></div>
 
         <div class="link"><a href="https://www.twitch.tv/cut0x" target="_blank"><i class="bi bi-twitch"></i></a></div>
+
+        <div class="link"><a href="https://discord.gg/aTX6FP37pK" target="_blank"><i class="bi bi-discord"></i></a></div>
     </div>
     
     <div style="margin: 18px;"></div>

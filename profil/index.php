@@ -112,7 +112,7 @@
         
                 if (isset($_FILES)) {
                     var_dump($_FILES["miniature"]["tmp_name"]);
-                    $chemin = 'uploads/'.$lastId.'.jpg';
+                    $chemin = './uploads/'.$lastId.'.jpg';
         
                     move_uploaded_file($_FILES['miniature']['tmp_name'], $chemin);
                 } else {

@@ -5,10 +5,6 @@
 				
     session_start();
 
-    if (!isset($_SESSION['user_login'])) {
-        header("location: ../");
-    };
-
     if (isset($_SESSION['user_login'])) {
         $id = $_SESSION['user_login'];
                     
@@ -31,8 +27,8 @@
 	
 	/*          DEFINITION TEXT PAR LANG          */
 	// Titre
-	$titre_fr = "Envoi d'article";
-	$titre_en = "Article sending";
+	$titre_fr = "Blog";
+	$titre_en = "Blog";
 	// NavBar
 	$projects_fr = "Projets";
 	$projects_en = "Projects";
@@ -116,7 +112,7 @@
         <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
         <?php if (isset($_REQUEST['user_login'])) { ?>
             <a href="../auth/logout/?lang=<?= $lang; ?>" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
-        <? }; ?>
+        <?php }; ?>
     </div>
     
     <div style="margin: 200px;"></div>

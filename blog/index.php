@@ -118,9 +118,9 @@
     <div style="margin: 200px;"></div>
 
     <?php if (isset($_GET['art'])) { ?>
-        <!-- -->
+        <?php if ($lang == "fr") { echo "Article Français"; } else { echo "Article English"; }; ?>
     <?php } else { ?>
-        <!-- -->
+        <?php if ($lang == "fr") { echo "Blog Français"; } else { echo "Blog English"; }; ?>
     <?php }; ?>
     <div class="container_form">
     </div>

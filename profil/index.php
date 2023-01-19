@@ -107,6 +107,7 @@
                         $title_en,
                         $content_fr,
                         $content_en,
+                        $image_url,
                         $row['user_id']
                     )
                 );
@@ -143,7 +144,7 @@
                     "color" => hexdec('#15252c'),
                     
                     "image" => [
-                        "url" => "https://cutox.alwaysdata.net/profil/uploads/".$lastid.".jpg"
+                        "url" => $image_url
                     ],
 
                     "author" => [

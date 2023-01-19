@@ -198,53 +198,6 @@ nav a:hover {
     box-shadow: 5px 5px 5px black;
 }
 
-@media (max-width:600px) {
-	.container {
-		display: grid;
-        justify-content: center;
-        text-align: center;
-	}
-
-	.obj img {
-		width: 300px;
-		border-radius: 300px;
-	}
-
-    .social_links {
-        display: flex;
-        justify-content: center;
-        font-size: 40px;
-    }
-    
-    .link {
-        margin: 5px;
-    }
-    
-    .link a {
-        text-decoration: none;
-        color: white;
-        border: 6px solid #212e33;
-        background-color: #212e33;
-        border-radius: 80px;
-    }
-    
-    .link a:hover {
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .last_article a {
-        width: 400px;
-        display: grid;
-        justify-content: center;
-        text-decoration: none;
-        color: white;
-        background-color: #212e33;
-        font-size: 20px;
-        border: 4px solid #212e33;
-        border-radius: 20px;
-    }
-}
-
 .footer {
     text-align: center;
     background-color: #212e33;
@@ -313,4 +266,89 @@ form input[type=submit]:hover {
 
 .error strong {
     color: red;
+}
+
+.container_art {
+    display: grid;
+    justify-content: center;
+}
+
+.author {
+	padding: 20px;
+	background-color: #04040c;
+	border-radius: 25px;
+	width: 500px;
+	text-align: center
+}
+
+.author h3 {
+    color: #5865F2;
+}
+
+.content {
+	padding: 20px;
+	background-color: #04040c;
+	border-radius: 25px;
+	width: 800px;
+	text-align: left
+}
+
+.content .div_img {
+	height: 200px;
+	border-radius: 20px
+}
+
+@media (max-width:600px) {
+	.container {
+		display: grid;
+        justify-content: center;
+        text-align: center;
+	}
+
+	.obj img {
+		width: 300px;
+		border-radius: 300px;
+	}
+
+    .social_links {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+    
+    .link {
+        margin: 5px;
+    }
+    
+    .link a {
+        text-decoration: none;
+        color: white;
+        border: 6px solid #212e33;
+        background-color: #212e33;
+        border-radius: 80px;
+    }
+    
+    .link a:hover {
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .last_article a {
+        width: 400px;
+        display: grid;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: #212e33;
+        font-size: 20px;
+        border: 4px solid #212e33;
+        border-radius: 20px;
+    }
+	
+	.author {
+		width: 500px;
+	}
+
+    .content {
+        width: 500px;
+    }
 }

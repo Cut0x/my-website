@@ -58,7 +58,31 @@
     $error_content_fr = "Erreur 2";
     $error_content_en = "Error 2";
 
-    /* CODE DU SYSTEME DE CONNEXION */
+    /* CODE POUR RECUPERER L'ARTICLE */
+    if (isset($_GET['art'])) {
+        $id_art = $_GET['art'];
+                    
+        $select_stmt_t = $db -> prepare("SELECT * FROM article WHERE article_id=:uid");
+        $select_stmt_t -> execute(
+            array(
+                ":uid" => $id_art
+            )
+        );
+        
+        $row_art = $select_stmt_t -> fetch(PDO::FETCH_ASSOC);
+
+
+        $author_id = $row_art['article_id'];
+                    
+        $select_stmt_a = $db -> prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+        $select_stmt_a -> execute(
+            array(
+                ":uid" => $author_id
+            )
+        );
+        
+        $row_author = $select_stmt_a -> fetch(PDO::FETCH_ASSOC);
+    };
 ?>
 
 <!DOCTYPE html>
@@ -110,15 +134,34 @@
 
     <div style="text-align: center;">
         <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
-        <?php if (isset($_REQUEST['user_login'])) { ?>
+        <?php if (!isset($_REQUEST['user_login'])) { ?>
             <a href="../auth/logout/?lang=<?= $lang; ?>" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
         <?php }; ?>
+        <a href="./?lang=<?= $lang; ?>" class="btn"><i class="bi bi-arrow-return-left"></i></a>
     </div>
     
-    <div style="margin: 200px;"></div>
+    <div style="margin: 90px;"></div>
 
     <?php if (isset($_GET['art'])) { ?>
-        <?php if ($lang == "fr") { echo "Article Français"; } else { echo "Article English"; }; ?>
+        <?php if ($lang == "fr") { ?> 
+            <div class="container_art">
+                <div class="author">
+                    <h1>Auteur</h1>
+                    <h3><?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?> </h3>
+                </div>
+
+                <div style="margin: 20px;"></div>
+
+                <div class="content">
+                    <div class="div_img" style="background-image: url(<?= $row_art['url_image']; ?>);"></div>
+                    <h1><?= $row_art['title_content_fr']; ?></h1>
+
+                    <p>
+                        <?= nl2br($row_art['body_content_fr']); ?>
+                    </p>
+                </div>
+            </div>
+        <?php } else { echo "Article English"; }; ?>
     <?php } else { ?>
         <?php if ($lang == "fr") { echo "Blog Français"; } else { echo "Blog English"; }; ?>
     <?php }; ?>

@@ -161,7 +161,25 @@
                     </p>
                 </div>
             </div>
-        <?php } else { echo "Article English"; }; ?>
+        <?php } else { ?>
+            <div class="container_art">
+                <div class="author">
+                    <h1>Author</h1>
+                    <h3><?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?> </h3>
+                </div>
+
+                <div style="margin: 20px;"></div>
+
+                <div class="content">
+                    <div class="div_img" style="background-image: url(<?= $row_art['url_image']; ?>);"></div>
+                    <h1><?= $row_art['title_content_en']; ?></h1>
+
+                    <p>
+                        <?= nl2br($row_art['body_content_en']); ?>
+                    </p>
+                </div>
+            </div>
+        <?php }; ?>
     <?php } else { ?>
         <?php if ($lang == "fr") { echo "Blog Français"; } else { echo "Blog English"; }; ?>
     <?php }; ?>

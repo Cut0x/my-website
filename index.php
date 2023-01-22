@@ -55,6 +55,19 @@
 
     /** MON TAG DISCORD **/
     $tag = "5669";
+
+    /* AFFICHAGE DERNIER ARTICLE */
+    $lastId = $db -> lastInsertId();
+                    
+    $select_stmt_article = $db -> prepare("SELECT * FROM article WHERE article_id=:uid");
+    $select_stmt_article -> execute(
+        array(
+            ":uid" => $lastId
+        )
+    );
+    
+    $row_art = $select_stmt_article -> fetch(PDO::FETCH_ASSOC);
+    
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +94,8 @@
 	<link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
-<header>
+    <?php echo $lastId; ?>
+    <header>
         <nav>
             <a class="logo" href="./?lang=<?= $lang; ?>">Cut0x</a>
             <div class="mobile-menu">
@@ -149,14 +163,14 @@
 
     <div class="last_article">
         <h1><?php if ($lang == "fr") { echo $arti_fr; } else { echo $arti_en; }; ?></h1>
-        <a href="#">
+        <a href="./blog/?lang=<?= $lang; ?>&art=<?php echo '1'; ?>">
             <div class="article">
                 <h1>
-                    Comment faire du montage ?
+                    <?php if ($lang == "fr") { echo $row_art['title_content_fr']; } else { echo $row_art['title_content_en']; }; ?>
                 </h1>
 
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, velit reiciendis placeat voluptatum voluptatibus quam maiores recusandae, sit aliquid, hic ullam. Fugiat quasi ratione, corrupti exercitationem nam illo vel facere.
+                    <?php if ($lang == "fr") { echo $row_art['body_content_fr']; } else { echo $row_art['body_content_fr']; }; ?>
                 </p>
             </div>
         </a>

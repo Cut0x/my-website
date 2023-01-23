@@ -57,7 +57,8 @@
     $tag = "5669";
 
     /* AFFICHAGE DERNIER ARTICLE */
-    $lastId = $db -> lastInsertId();
+    $prep_db = $db -> prepare("SELECT * FROM article");
+    $lastId = $prep_db -> lastInsertId();
                     
     $select_stmt_article = $db -> prepare("SELECT * FROM article WHERE article_id=:uid");
     $select_stmt_article -> execute(
@@ -94,7 +95,7 @@
 	<link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
-    <?php echo $lastId; ?>
+    <?php var_dump($lastId); ?>
     <header>
         <nav>
             <a class="logo" href="./?lang=<?= $lang; ?>">Cut0x</a>

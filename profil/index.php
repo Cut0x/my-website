@@ -62,7 +62,7 @@
     $error_content_fr = "Erreur 2";
     $error_content_en = "Error 2";
 
-    /* CODE DU SYSTEME DE CONNEXION */
+    /* CODE DU SYSTEME D'ENVOIE D'ARTICLE */
     if(isset($_REQUEST['btn_send'])) {
         $title_fr = strip_tags($_REQUEST['btn_title_fr']);
         $title_en = strip_tags($_REQUEST['btn_title_en']);

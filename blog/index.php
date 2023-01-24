@@ -72,7 +72,7 @@
         $row_art = $select_stmt_t -> fetch(PDO::FETCH_ASSOC);
 
 
-        $author_id = $row_art['article_id'];
+        $author_id = $row_art['authorId'];
                     
         $select_stmt_a = $db -> prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
         $select_stmt_a -> execute(
@@ -133,7 +133,11 @@
     <div style="margin: 20px;"></div>
 
     <div style="text-align: center;">
-        <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
+        <?php if (isset($_GET['art'])) { ?>
+            <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>&art=<?= $_GET['art']; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
+        <?php } else { ?>
+            <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
+        <?php }; ?>
         <?php if (!isset($_REQUEST['user_login'])) { ?>
             <a href="../auth/logout/?lang=<?= $lang; ?>" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
         <?php }; ?>

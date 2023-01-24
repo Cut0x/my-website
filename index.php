@@ -96,7 +96,6 @@
 	<link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
-    <?php var_dump($lastId); ?>
     <header>
         <nav>
             <a class="logo" href="./?lang=<?= $lang; ?>">Cut0x</a>

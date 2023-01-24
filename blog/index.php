@@ -140,10 +140,12 @@
         <?php } else { ?>
             <a href="./?lang=<?php if ($lang == "fr") { echo "en"; } else { echo "fr"; }; ?>" class="btn"><?php if ($lang == "fr") { echo $pass_fr; } else { echo $pass_en; }; ?></a>
         <?php }; ?>
-        <?php if (!isset($_REQUEST['user_login'])) { ?>
+        <?php if (isset($_REQUEST['user_login'])) { ?>
             <a href="../auth/logout/?lang=<?= $lang; ?>" class="btn"><?php if ($lang == "fr") { echo $logout_fr; } else { echo $logout_en; }; ?></a>
         <?php }; ?>
-        <a href="./?lang=<?= $lang; ?>" class="btn"><i class="bi bi-arrow-return-left"></i></a>
+        <?php if (isset($_GET['art'])) { ?>
+            <a href="./?lang=<?= $lang; ?>" class="btn"><i class="bi bi-arrow-return-left"></i></a>
+        <?php }; ?>
     </div>
     
     <div style="margin: 90px;"></div>
@@ -187,19 +189,7 @@
             </div>
         <?php }; ?>
     <?php } else { ?>
-        <?php while($a = $articles -> fetch()) {
-	        $select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
-	        $select_stmt->execute(array(":uid"=>$id));
-	
-	        $row_while=$select_stmt->fetch(PDO::FETCH_ASSOC);
-
-            $id = $a['authorId'];
-                
-            $select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
-            $select_stmt->execute(array(":uid"=>$id));
-          
-            $row_suer=$select_stmt->fetch(PDO::FETCH_ASSOC);
-        ?>
+        <?php while($a = $articles -> fetch()) { ?>
             <div class="last_article">
                 <a href="./?lang=<?= $lang; ?>&art=<?= $a['article_id']; ?>">
                     <div class="article">

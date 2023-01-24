@@ -197,7 +197,7 @@
                             <?php if ($lang == "fr") { echo $a['title_content_fr']; } else { echo $a['title_content_en']; }; ?>
                         </h1>
 
-                        <p>
+                        <p> <!-- Faire en sorte que le code n'affiche que les 200 premiers caractères -->
                             <?php if ($lang == "fr") { echo $a['body_content_fr']; } else { echo $a['body_content_fr']; }; ?>
                         </p>
                     </div>

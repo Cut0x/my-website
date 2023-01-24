@@ -57,8 +57,9 @@
     $tag = "5669";
 
     /* AFFICHAGE DERNIER ARTICLE */
-    $prep_db = $db -> prepare("SELECT * FROM article");
-    $lastId = $prep_db -> lastInsertId();
+    /*$lstId = $db -> lastInsertId();
+
+    $lastId = intval($lstId) + 1;
                     
     $select_stmt_article = $db -> prepare("SELECT * FROM article WHERE article_id=:uid");
     $select_stmt_article -> execute(
@@ -67,7 +68,7 @@
         )
     );
     
-    $row_art = $select_stmt_article -> fetch(PDO::FETCH_ASSOC);
+    $row_art = $select_stmt_article -> fetch(PDO::FETCH_ASSOC);*/
     
 ?>
 
@@ -160,7 +161,7 @@
         </a>
     </div>
 
-    <div style="margin: 400px;"></div>
+    <!--<div style="margin: 400px;"></div>
 
     <div class="last_article">
         <h1><?php if ($lang == "fr") { echo $arti_fr; } else { echo $arti_en; }; ?></h1>
@@ -183,7 +184,7 @@
         <a href="./blog/?lang=<?= $lang; ?>" class="btn">
             <?php if ($lang == "fr") { echo $go_b_fr; } else { echo $go_b_en; }; ?>
         </a>
-    </div>
+    </div>-->
 
     <div style="margin: 150px;"></div>
 

@@ -185,7 +185,7 @@
         </a>
     </div>-->
 
-    <div style="margin: 150px;"></div>
+    <div style="margin: 240px;"></div>
 
     <div class="footer">
         <?php if ($lang == "fr") { echo $foot_p1_fr; } else { echo $foot_p1_en; }; ?> <span style="color: orangered"><i class="bi bi-heart-fill"></i></span> <?php if ($lang == "fr") { echo $foot_p2_fr; } else { echo $foot_p2_en; }; ?> 

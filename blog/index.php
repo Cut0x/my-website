@@ -83,6 +83,8 @@
         
         $row_author = $select_stmt_a -> fetch(PDO::FETCH_ASSOC);
     };
+
+    $articles = $db->query('SELECT * FROM article ORDER BY date_publication DESC');
 ?>
 
 <!DOCTYPE html>
@@ -185,7 +187,35 @@
             </div>
         <?php }; ?>
     <?php } else { ?>
-        <?php if ($lang == "fr") { echo "Blog Français"; } else { echo "Blog English"; }; ?>
+        <?php while($a = $articles -> fetch()) {
+	        $select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+	        $select_stmt->execute(array(":uid"=>$id));
+	
+	        $row_while=$select_stmt->fetch(PDO::FETCH_ASSOC);
+
+            $id = $a['authorId'];
+                
+            $select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+            $select_stmt->execute(array(":uid"=>$id));
+          
+            $row_suer=$select_stmt->fetch(PDO::FETCH_ASSOC);
+        ?>
+            <div class="last_article">
+                <a href="./?lang=<?= $lang; ?>&art=<?= $a['article_id']; ?>">
+                    <div class="article">
+                        <h1>
+                            <?php if ($lang == "fr") { echo $a['title_content_fr']; } else { echo $a['title_content_en']; }; ?>
+                        </h1>
+
+                        <p>
+                            <?php if ($lang == "fr") { echo $a['body_content_fr']; } else { echo $a['body_content_fr']; }; ?>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="margin: 35px;"></div>
+        <?php }; ?>
     <?php }; ?>
     <div class="container_form">
     </div>

@@ -22,6 +22,10 @@
         
         $row = $select_stmt -> fetch(PDO::FETCH_ASSOC);
     };
+    
+    $year = intval(date('Y'));
+    $age = $year - 2005;
+    $time = $year - 2012;
 	
 	/*          DEFINITION TEXT PAR LANG          */
 	// Titre
@@ -36,8 +40,8 @@
 	$pass_fr = "Switch to English";
 	$pass_en = "Passer en Français";
     // Description
-    $desc_fr = "Bonjour, je suis Cut0x, j'ai 17ans (bientôt 18ans). Je suis un passionné de programmation depuis maintenant 10ans (j'ai commencé la programmation en 2012). Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.";
-    $desc_en = "Hello, I'm Cut0x, I'm 17 (soon to be 18). I have been a programming enthusiast for 10 years now (I started programming in 2012). What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.";
+    $desc_fr = "Bonjour, je suis Cut0x, j'ai ".$age."ans. Je suis un passionné de programmation depuis maintenant ".$time."ans (j'ai commencé la programmation en 2012). Ce que j'aime par dessus tout, c'est le développement web, j'utilise pour ça le HTML5, le CSS3, le PHP et le JavaScript.";
+    $desc_en = "Hello, I'm Cut0x, I'm ".$age.". I have been a programming enthusiast for ".$time."years now (I started programming in 2012). What I love above all is web development, I use for that HTML5, CSS3, PHP and JavaScript.";
     // Footer
     $foot_p1_fr = "Développé avec";
     $foot_p1_en = "Developed with";
@@ -69,7 +73,6 @@
     );
     
     $row_art = $select_stmt_article -> fetch(PDO::FETCH_ASSOC);*/
-    
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +84,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -154,11 +159,11 @@
     
     <div style="margin: 18px;"></div>
 
-    <div class="btn_div">
-        <a href="./about/?lang=<?= $lang; ?>" class="btn">
+    <!--<div class="btn_div">
+        <a href="./#?lang=<?= $lang; ?>" class="btn">
             <?php if ($lang == "fr") { echo $about_fr; } else { echo $about_en; }; ?>
         </a>
-    </div>
+    </div>-->
 
     <!--<div style="margin: 400px;"></div>
 

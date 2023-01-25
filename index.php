@@ -159,11 +159,11 @@
     
     <div style="margin: 18px;"></div>
 
-    <div class="btn_div">
-        <a href="./about/?lang=<?= $lang; ?>" class="btn">
+    <!--<div class="btn_div">
+        <a href="./#?lang=<?= $lang; ?>" class="btn">
             <?php if ($lang == "fr") { echo $about_fr; } else { echo $about_en; }; ?>
         </a>
-    </div>
+    </div>-->
 
     <!--<div style="margin: 400px;"></div>
 

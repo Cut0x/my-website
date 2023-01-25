@@ -1,3 +1,2 @@
-console.log('Pourquoi tu regarde mon code source ?\nRejoins mon discord : https://discord.gg/');
-console.warn('Ne pas copier mon code ! Cette version n\'est pas opensource !');
-console.error('Version opensource : https://github.com/Cut0x/');
+console.log('Pourquoi tu regarde mon code source ?\nRejoins mon discord : https://discord.gg/aTX6FP37pK\nFollow moi sur twitter : https://twitter.com/Cut0x_');
+console.warn('Ne pas copier mon code ! Il n\'est pas opensource !');

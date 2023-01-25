@@ -216,7 +216,7 @@
         <?php if ($lang == "fr") { echo $foot_p1_fr; } else { echo $foot_p1_en; }; ?> <span style="color: orangered"><i class="bi bi-heart-fill"></i></span> <?php if ($lang == "fr") { echo $foot_p2_fr; } else { echo $foot_p2_en; }; ?> 
     </div>
 
-    <script src="../../src/js/mobile-navbar.js"></script>
-    <script src="../../src/js/script.js"></script>
+    <script src="../src/js/mobile-navbar.js"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 </html>

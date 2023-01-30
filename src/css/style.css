@@ -144,8 +144,9 @@ nav a:hover {
 .obj img {
     border-radius: 180px;
     width: 180px;
-    border: 6px solid #5865F2;
+    border: 6px solid #810cab;
 }
+
 
 .obj h1 {
     font-size: 80px;

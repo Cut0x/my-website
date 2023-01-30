@@ -87,6 +87,8 @@
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+    <link rel="shortcut icon" href="./src/img/my-logo.png" type="image/x-icon">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -133,12 +135,14 @@
 
     <div class="container">
         <div class="obj">
-            <img src="./src/img/my-logo.png" alt="Logo Cut0x">
+            <div class="gradient">
+                <img src="./src/img/my-logo.png" alt="Logo Cut0x">
+            </div>
         </div>
 
         <div class="obj">
             <h1>
-                <span style="color: #5865F2;">Cut0x</span>#<span style="color: #5865F2;"><?= $tag; ?></span>
+                <span style="color: #810cab;">Cut0x</span>#<span style="color: #810cab;"><?= $tag; ?></span>
             </h1>
 
             <p>

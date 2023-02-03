@@ -157,7 +157,12 @@
             <div class="container_art">
                 <div class="author">
                     <h1>Auteur</h1>
-                    <h3><?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?> </h3>
+
+                    <img src="../profil/avatars/<?= $row_author['user_id']; ?>.png" style="width: 100px; border-radius: 60px" alt="">
+
+                    <h3>
+                        <?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?>
+                    </h3>
                 </div>
 
                 <div style="margin: 20px;"></div>
@@ -175,7 +180,12 @@
             <div class="container_art">
                 <div class="author">
                     <h1>Author</h1>
-                    <h3><?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?> </h3>
+
+                    <img src="../profil/avatars/<?= $row_author['user_id']; ?>.png" style="width: 100px; border-radius: 60px" alt="">
+
+                    <h3>
+                        <?= $row_author['pseudo']; ?> <?php if ($row_author['certif'] == 1) { echo '<span style="color: darkgreen;"><i class="bi bi-patch-check-fill"></i></span>'; }; ?>
+                    </h3>
                 </div>
 
                 <div style="margin: 20px;"></div>
@@ -199,6 +209,7 @@
                             <span style="color: orange;">#<?= $a['article_id']; ?></span> <?php if ($lang == "fr") { echo $a['title_content_fr']; } else { echo $a['title_content_en']; }; ?>
                         </h1>
 
+                        <div class="div_img" style="background-image: url('<?= $a['url_image']; ?>');"></div>
                     </div>
                 </a>
             </div>

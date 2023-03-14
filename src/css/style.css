@@ -63,7 +63,7 @@ body {
     border: 5px solid purple;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
     .topnav a:not(:first-child) {
         display: none;
     }

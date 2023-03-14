@@ -1,2 +1,8 @@
-console.log('Pourquoi tu regarde mon code source ?\nRejoins mon discord : https://discord.gg/aTX6FP37pK\nFollow moi sur twitter : https://twitter.com/Cut0x_');
-console.warn('Ne pas copier mon code ! Il n\'est pas opensource !');
+function NavIcon() {
+    var context = document.getElementById("navbar");
+    if (context.className === "topnav") {
+        context.className += " responsive";
+    } else {
+        context.className = "topnav";
+    };
+};

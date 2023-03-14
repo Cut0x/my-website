@@ -6,6 +6,8 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #1e282e;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .topnav a {
@@ -46,6 +48,7 @@ body {
     background-color: #1e282e;
     display: flex;
     justify-content: center;
+    border-radius: 20px;
 }
 
 .obj {

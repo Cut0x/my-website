@@ -1,3 +1,11 @@
+<?php
+    require_once './src/data/config.php';
+
+    if (!isset($_GET['page'])) {
+        header('location: ./?page=home');
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +17,13 @@
 
     <meta name="description" content="Bienvenue sur la page web de Loïc alias Cut0x !">
 
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <!-- -->
+    <?php include('./src/includes/header.php'); ?>
+
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

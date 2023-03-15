@@ -32,14 +32,17 @@
     <?php } else if ($_GET['page'] == "contact") { ?>
     <?php } else if ($_GET['page'] == "auth") { ?>
     <?php } else if ($_GET['page'] == "error") { ?>
+        <!-- IMPORT ERROR PAGE -->
+        <?php include('./src/includes/page/error.php'); ?>
+        <!-- ------------------ -->
     <?php } else if ($_GET['page'] == "succes") { ?>
-        <!-- SUCCES PAGE -->
+        <!-- IMPORT SUCCES PAGE -->
         <?php include('./src/includes/page/succes.php'); ?>
-        <!-- ----------- -->
+        <!-- ------------------ -->
     <?php } else { ?>
-        <!-- NO PAGE LINKED -->
+        <!-- IMPORT NO PAGE LINKED -->
         <?php include('./src/includes/page/no-page.php'); ?>
-        <!-- -------------- -->
+        <!-- --------------------- -->
     <?php }; ?>
 
     <!-- IMPORT FOOTER -->

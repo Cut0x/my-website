@@ -1,3 +1,4 @@
+<?php if ($_GET['page'] !== "about") { ?>
 <div class="header">
     <div class="obj logo">
         <img src="./src/assets/logo.png" alt="">
@@ -6,6 +7,7 @@
         <h1>Hi and welcome !</h1>
     </div>
 </div>
+<?php }; ?>
 
 <div class="topnav" id="navbar">
     <a href="./?page=home" <?php if ($_GET['page'] == "home") { echo 'class="active"'; }; ?>><i class="bi bi-house-door-fill"></i> Home</a>
@@ -22,3 +24,5 @@
         <i class="bi bi-text-indent-right"></i>
     </a>
 </div>
+
+<div style="margin-bottom: 100px;"></div>

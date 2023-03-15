@@ -66,6 +66,18 @@ body {
     border: 5px solid purple;
 }
 
+#footer {
+    display: flex;
+    justify-content: center;
+}
+#footer .inner {
+    background-color: #1e282e;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: 25px;
+    width: 100%;
+}
+
 #main {
     display: flex;
     justify-content: center;   

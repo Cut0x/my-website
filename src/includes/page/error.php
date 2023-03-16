@@ -1,3 +1,13 @@
+<?php
+    if (!isset($_GET['id'])) {
+        $errorMsg = "No error code was found !";
+    } else if ($_GET['id'] == "1") { // Not have permission
+        $errorMsg = "You do not have permission to access this page !";
+    } else if ($_GET['id'] == "2") { // Unavailable at the moment
+        $errorMsg = "Page unavailable at the moment !";
+    }
+?>
+
 <div id="main">
     <div id="container-no-page">
         <h1>
@@ -5,7 +15,7 @@
         </h1>
 
         <p>
-            Message
+            <?= $errorMsg; ?>
         </p>
 
         <center>

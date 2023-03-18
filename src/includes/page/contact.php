@@ -1,3 +1,9 @@
+<?php
+    if (isset($_REQUEST['btn_send'])) {
+        header('location: ./?page=succes&id=1');
+    }
+?>
+
 <div id="main">
     <div id="container-contact">
         <div id="object-contact">
@@ -42,7 +48,7 @@
                 <div style="margin-bottom: 15px;"></div>
 
                 <div class="obj-ctct">
-                    <input type="submit" value="Send Mail">
+                    <input name="btn_send" type="submit" value="Send Mail">
                 </div>
             </form>
         </div>

@@ -1,6 +1,8 @@
 <?php
     require_once './src/data/config.php';
 
+    session_start();
+
     if (!isset($_GET['page'])) {
         header('location: ./?page=home');
     };
@@ -26,29 +28,47 @@
     <?php include('./src/includes/header.php'); ?>
     <!-- ------------- -->
 
-    <?php if ($_GET['page'] == "home") { ?>
-    <?php } else if ($_GET['page'] == "about") { ?>
-    <?php } else if ($_GET['page'] == "projects") { ?>
-    <?php } else if ($_GET['page'] == "contact") { ?>
-    <?php } else if ($_GET['page'] == "auth") { ?>
-    <?php } else if ($_GET['page'] == "error") { ?>
-        <!-- IMPORT ERROR PAGE -->
-        <?php include('./src/includes/page/error.php'); ?>
-        <!-- ------------------ -->
-    <?php } else if ($_GET['page'] == "succes") { ?>
-        <!-- IMPORT SUCCES PAGE -->
-        <?php include('./src/includes/page/succes.php'); ?>
-        <!-- ------------------ -->
-    <?php } else { ?>
-        <!-- IMPORT NO PAGE LINKED -->
-        <?php include('./src/includes/page/no-page.php'); ?>
-        <!-- --------------------- -->
-    <?php }; ?>
+    <?php
+    if ($_GET['page'] == "home") {
+        /* IMPORT HOME PAGE */
+        /* **************** */
+    } else if ($_GET['page'] == "about") {
+        /* IMPORT ABOUT PAGE */
+        header('location: ./?page=error&id=2');
+        /* ***************** */
+    } else if ($_GET['page'] == "projects") {
+        /* IMPORT PROJECTS PAGE */
+        header('location: ./?page=error&id=2');
+        /* ******************** */
+    } else if ($_GET['page'] == "contact") {
+        /* IMPORT CONTACT PAGE */
+        include('./src/includes/page/contact.php');
+        /* ******************* */
+    } else if ($_GET['page'] == "auth") {
+        /* IMPORT AUTH PAGE */
+        header('location: ./?page=error&id=2');
+        /* **************** */
+    } else if ($_GET['page'] == "error") {
+        /* IMPORT ERROR PAGE */
+        include('./src/includes/page/error.php');
+        /* ***************** */
+    } else if ($_GET['page'] == "succes") {
+        /* IMPORT SUCCES PAGE -*/
+        include('./src/includes/page/succes.php');
+        /* ******************* */
+    } else {
+        /* IMPORT NO PAGE LINKED */
+        include('./src/includes/page/no-page.php');
+        /* ********************* */
+    };
+    ?>
 
     <!-- IMPORT FOOTER -->
     <?php include('./src/includes/footer.php'); ?>
     <!-- ------------- -->
 
+    <!-- SCRIPT JAVASCRIPT -->
     <script src="./src/js/script.js"></script>
+    <!-- ----------------- -->
 </body>
 </html>

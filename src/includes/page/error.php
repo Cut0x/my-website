@@ -5,6 +5,8 @@
         $errorMsg = "You do not have permission to access this page !";
     } else if ($_GET['id'] == "2") { // Unavailable at the moment
         $errorMsg = "Page unavailable at the moment !";
+    } else if ($_GET['id'] == "3") { // Success code not found
+        $errorMsg = "No success code was found !";
     }
 ?>
 

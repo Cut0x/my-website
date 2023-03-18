@@ -153,6 +153,78 @@ body {
     box-shadow: 5px 5px 5px black;
 }
 
+#container-contact {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+#object-contact .link {
+    display: flex;
+    justify-content: center;
+}
+
+#object-contact .link a {
+    margin: 8px;
+    font-size: 70px;
+}
+
+.twitter {
+    text-decoration: none;
+    color: #1d9bf0;
+}
+
+.discord {
+    text-decoration: none;
+    color: #5562ea;
+}
+
+.instagram {
+    text-decoration: none;
+    color: #f60f46;
+}
+
+.gmail {
+    text-decoration: none;
+    color: #f44336;
+}
+
+.twitter:hover {
+    color: #0d7ac3;
+}
+
+.discord:hover {
+    color: #3642bd;
+}
+
+.instagram:hover {
+    color: #b00f35;
+}
+
+.gmail:hover {
+    color: #bd2015;
+}
+
+.contact-form {
+    text-align: center;
+    background-color: #3642bd;
+    font-size: 50px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.contact-form input[type=email], input[type=text], textarea {
+    font-size: 40px;
+}
+
+.contact-form textarea {
+    width: 500px;
+}
+
+.contact-form input[type=submit] {
+    font-size: 30px;
+}
+
 @media screen and (max-width: 850px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -197,5 +269,17 @@ body {
         width: 200px;
         border-radius: 200px;
         border: 5px solid purple;
+    }
+    
+    .contact-form {
+        font-size: 35px;
+    }
+
+    .contact-form input[type=email], input[type=text], textarea {
+        font-size: 30px;
+    }
+
+    .contact-form textarea {
+        width: 300px;
     }
 }

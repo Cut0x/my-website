@@ -12,8 +12,38 @@
         
         <div id="object-contact">
             <h1>Send me a mail</h1>
-            <form method="post">
-                <label for="">test</label>
+            <form method="post" class="contact-form">
+                <div class="obj-ctct">
+                    <label for="">Your E-Mail <span style="color: red;">*</span></label><br>
+                    <input type="email" name="" id="" placeholder="exemple@site.com">
+                </div>
+
+                <div style="margin-bottom: 15px;"></div>
+
+                <div class="obj-ctct">
+                    <label for="">Your Name <span style="color: red;">*</span></label><br>
+                    <input type="text" name="" id="" placeholder="Mr. BOUDIER">
+                </div>
+
+                <div style="margin-bottom: 15px;"></div>
+
+                <div class="obj-ctct">
+                    <label for="">Object <span style="color: red;">*</span></label><br>
+                    <input type="text" name="" id="" placeholder="I would like a website">
+                </div>
+
+                <div style="margin-bottom: 15px;"></div>
+
+                <div class="obj-ctct">
+                    <label for="">Content <span style="color: red;">*</span></label><br>
+                    <textarea name="" id="" rows="8" placeholder="Add as much information as possible about your request, whether for an order, a question or a partnership / sponsor!"></textarea>
+                </div>
+
+                <div style="margin-bottom: 15px;"></div>
+
+                <div class="obj-ctct">
+                    <input type="submit" value="Send Mail">
+                </div>
             </form>
         </div>
     </div>

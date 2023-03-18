@@ -156,11 +156,7 @@ body {
 #container-contact {
     display: grid;
     justify-content: center;
-}
-
-#object-contact {
-    margin-bottom: 25px;
-    width: 80%;
+    text-align: center;
 }
 
 #object-contact .link {
@@ -209,6 +205,26 @@ body {
     color: #bd2015;
 }
 
+.contact-form {
+    text-align: center;
+    background-color: #3642bd;
+    font-size: 50px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.contact-form input[type=email], input[type=text], textarea {
+    font-size: 40px;
+}
+
+.contact-form textarea {
+    width: 500px;
+}
+
+.contact-form input[type=submit] {
+    font-size: 30px;
+}
+
 @media screen and (max-width: 850px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -253,5 +269,17 @@ body {
         width: 200px;
         border-radius: 200px;
         border: 5px solid purple;
+    }
+    
+    .contact-form {
+        font-size: 35px;
+    }
+
+    .contact-form input[type=email], input[type=text], textarea {
+        font-size: 30px;
+    }
+
+    .contact-form textarea {
+        width: 300px;
     }
 }

@@ -20,7 +20,7 @@
 
         <center>
             <a href="./?page=home">
-                Go home
+                Go home you stupid
             </a>
         </center>
     </div>

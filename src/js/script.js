@@ -6,3 +6,9 @@ function NavIcon() {
         context.className = "topnav";
     };
 };
+
+console.log('Hey !')
+
+setTimeout(() => {
+    console.log('How are u ? Contact me on the contact page !');
+}, 3000);

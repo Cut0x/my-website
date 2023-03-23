@@ -73,7 +73,7 @@ body {
 #footer .inner {
     background-color: #1e282e;
     border-radius: 30px;
-    padding: 5px;
+    padding: 3px;
     font-size: 35px;
     width: 100%;
     text-align: center;
@@ -226,6 +226,15 @@ body {
     font-size: 30px;
 }
 
+#container-home {
+    font-size: 40px;
+}
+
+#container-home a {
+    text-decoration: none;
+    color: #5865F2;
+}
+
 @media screen and (max-width: 850px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -282,5 +291,9 @@ body {
 
     .contact-form textarea {
         width: 300px;
+    }
+
+    #container-home {
+        font-size: 25px;
     }
 }

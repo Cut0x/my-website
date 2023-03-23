@@ -74,8 +74,9 @@ body {
     background-color: #1e282e;
     border-radius: 30px;
     padding: 5px;
-    font-size: 25px;
+    font-size: 35px;
     width: 100%;
+    text-align: center;
 }
 
 #main {

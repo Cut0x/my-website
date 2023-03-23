@@ -31,6 +31,7 @@
     <?php
     if ($_GET['page'] == "home") {
         /* IMPORT HOME PAGE */
+        include('./src/includes/page/home.php');
         /* **************** */
     } else if ($_GET['page'] == "about") {
         /* IMPORT ABOUT PAGE */

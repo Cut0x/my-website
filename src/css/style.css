@@ -67,7 +67,7 @@ body {
 }
 
 #footer {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 #footer .inner {

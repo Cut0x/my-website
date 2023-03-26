@@ -17,7 +17,7 @@
 
     <title>Cut0x's Website</title>
 
-    <meta name="description" content="Welcome to the website of Loïc, alias Cut0x !">
+    <meta name="description" content="Welcome to the website of Loïc, aka Cut0x !">
 
     <link rel="shortcut icon" href="./src/assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/style.css">

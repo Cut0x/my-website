@@ -18,7 +18,7 @@
 
     <a href="./?page=contact" <?php if ($_GET['page'] == "contact") { echo 'class="active"'; }; ?>><i class="bi bi-envelope-fill"></i> Contact</a>
 
-    <a href="./?page=auth" class="a2 <?php if ($_GET['page'] == "auth") { echo 'active'; }; ?>"><i class="bi bi-box-arrow-in-right"></i> Connexion</a>
+    <a href="#" class="a2"><i class="bi bi-database-fill-gear"></i> Panel</a>
         
     <a href="javascript:void(0);" class="icon" onclick="NavIcon()">
         <i class="bi bi-text-indent-right"></i>
